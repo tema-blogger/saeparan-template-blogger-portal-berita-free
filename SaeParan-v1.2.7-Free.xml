@@ -1,0 +1,795 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+Third-party software notices
+@noble/curves2.4.0
+The MIT License (MIT)
+
+Copyright (c) 2022 Paul Miller (https://paulmillr.com)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the “Software”), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+
+@noble/hashes2.4.0
+The MIT License (MIT)
+
+Copyright (c) 2022 Paul Miller (https://paulmillr.com)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the “Software”), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+-->
+
+<!-- TemaBlogger release | product=saeparan | releaseVersion=1.2.7 | date=2026-11-16 | delivery=free-v1 | basePremiumVersion=1.2.6 -->
+
+<!DOCTYPE html>
+<html b:css='false' b:defaultwidgetversion='2' b:layoutsVersion='3' b:responsive='true' b:templateVersion="1.2.7" expr:dir='data:blog.languageDirection' expr:lang='data:blog.localeUnderscoreDelimited' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
+<head>
+<meta content='width=device-width, initial-scale=1' name='viewport'/>
+<meta charset='UTF-8'/>
+<title><data:blog.pageTitle/></title>
+<b:include data='blog' name='all-head-content'/>
+<meta content='#00858a' name='theme-color'/>
+<link href='https://fonts.googleapis.com' rel='preconnect'/>
+<link crossorigin='anonymous' href='https://fonts.gstatic.com' rel='preconnect'/>
+<link href='https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700;800&amp;family=PT+Serif:ital,wght@0,400;0,700;1,400&amp;display=swap' rel='stylesheet'/>
+<b:skin><![CDATA[
+/* Saeparan 1.4 */
+body:not(#layout) [hidden]{display:none!important}
+.related-posts,.portal-lead{display:none}.related-posts.show,.portal-lead.show{display:block}
+:root{--teal:#00a7ac;--accent:#00858a;--green:#00c99a;--red:#e5224c;--bg:#eee;--paper:#fff;--ink:#151515;--muted:#777;--line:#e9e9e9;--width:1024px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font:16px/1.5 Heebo,Arial,sans-serif;color:var(--ink);background:var(--bg)}a{color:inherit;text-decoration:none}a:hover{color:var(--accent)}button,input{font:inherit}button,a,input{ -webkit-tap-highlight-color:transparent}button{cursor:pointer}img{display:block;max-width:100%;height:auto}button{color:inherit}a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{outline:3px solid var(--teal);outline-offset:3px}h1,h2,h3,p{margin:0}svg{width:22px;height:22px;vertical-align:middle;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}.wrap{width:min(var(--width),100%);margin:auto;padding:0 12px}.skip{position:fixed;top:-70px;z-index:100;background:var(--accent);color:#fff;padding:12px}.skip:focus{top:0}.config-data{display:none!important}.widget{margin:0}.widget-content{overflow-wrap:anywhere}.quickedit{display:none}.site-header{position:sticky;top:0;z-index:40;background:var(--paper);border-bottom:1px solid var(--line)}.header-top{height:58px;display:flex;align-items:center;gap:36px}.logo{display:flex;flex-direction:column;min-width:158px;line-height:.85;color:var(--teal)}.logo small{font-size:9px;line-height:12px;color:#666;text-align:center;letter-spacing:.05px}.logo strong{font-size:36px;letter-spacing:-1.8px;font-weight:800}.logo strong i{color:#ef4a64;font-style:normal}.logo img{max-width:170px;max-height:48px}.search-form{width:318px;position:relative}.search-form input{width:100%;height:34px;border-radius:24px;border:1px solid #aaa;background:#eee;padding:4px 38px 4px 48px;font-size:14px;color:var(--ink)}.search-form button{position:absolute;top:5px;left:12px;background:transparent;border:0;padding:0;color:#666}.header-actions{margin-left:auto;display:flex;align-items:center;gap:24px}.icon-button{padding:0;background:none;border:0;display:inline-flex;align-items:center;justify-content:center}.pill-button{border:0;border-radius:2px;background:var(--accent);color:#fff;padding:6px 12px;font-size:12px;font-weight:700;white-space:nowrap}.pill-button:hover{color:#fff;background:var(--teal)}.main-nav{display:flex;align-items:center;gap:20px;min-height:35px;font-size:15px;font-weight:600;white-space:nowrap}.main-nav a{padding:5px 0}.main-nav a.active{color:var(--accent)}.more-menu{position:relative;margin-left:auto}.more-menu summary{cursor:pointer;list-style:none}.more-menu .dropdown{position:absolute;right:0;top:33px;width:225px;max-height:65vh;overflow:auto;background:var(--paper);border:1px solid var(--line);box-shadow:0 6px 16px #0002;padding:12px;white-space:normal}.dropdown a{display:block;padding:8px}.sub-nav{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;padding:5px 0 8px;white-space:nowrap;font-size:14px;line-height:24px}.sub-nav a{background:#eee;border-radius:2px;padding:0 7px;color:#222}.sub-nav a:nth-child(2){background:#00427e;color:#fff}.sub-nav a:nth-child(3){background:#00b9ad;color:#fff}.mobile-menu{display:none}.main-wrap{padding-top:28px}.ad-slot{position:relative;text-align:center;margin-bottom:16px}.ad-placeholder{display:flex;flex-direction:column;align-items:center;justify-content:center;background:#e5e5e5;border:7px solid #e9e9e9;color:#999;min-height:250px;font:11px/1.8 Arial,sans-serif;letter-spacing:2px}.ad-placeholder b{font-size:18px;font-weight:400;letter-spacing:1px;color:#aaa}.ad-slot img{margin:auto;max-width:100%}.ad-label{display:block;color:#999;font-size:10px;text-align:center;letter-spacing:1px}.side-ad{position:fixed;top:155px;width:160px;z-index:2}.side-ad.left{right:calc(50% + 520px)}.side-ad.right{left:calc(50% + 520px)}.side-ad .ad-placeholder{height:600px}.stories{display:flex;gap:12px;overflow:auto;scrollbar-width:none;margin:12px 0 20px;scroll-snap-type:x mandatory}.story{flex:0 0 89px;text-align:center;font-size:12px;white-space:nowrap;scroll-snap-align:start}.story-ring{padding:4px;border:3px solid var(--green);border-right-color:var(--teal);border-radius:50%;width:89px;height:89px;margin:0 auto 6px;background:var(--paper)}.story-ring img{width:100%;height:100%;border-radius:50%;object-fit:cover}.story-ring .story-letter{border-radius:50%;height:100%;display:grid;place-items:center;font-size:28px;color:white;background:linear-gradient(145deg,#075e7b,#00bdb1)}.live-link{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:20px;padding:20px;background:linear-gradient(125deg,#075889,#00a4ca);color:#fff;margin-bottom:16px;min-height:235px}.live-link .live-image{position:relative}.live-link img{aspect-ratio:16/9;width:100%;object-fit:cover}.play-mark{display:grid;place-items:center;width:60px;height:48px;border:2px solid #fff;border-radius:9px;background:#0005;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-size:23px}.live-copy small{letter-spacing:3px;font-weight:700}.live-copy h2{font-size:26px;line-height:1.25;margin:16px 0}.live-copy span{font-size:12px}.live-badge{display:inline-block;background:#e8224c;padding:2px 8px;border-radius:2px;font-size:11px}.topics{display:flex;gap:5px;overflow:auto;scrollbar-width:none;white-space:nowrap;margin:16px 0 12px;padding:0 16px}.topics a{border-radius:24px;background:#1175a1;color:#fff;padding:8px 15px;font-size:13px;font-weight:600}.lead-layout,.content-layout{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,1fr);gap:16px;align-items:start}.hero-stage{position:relative}.hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:4px}.hero-card{position:relative;overflow:hidden;min-height:235px;border-radius:6px;background:#123a44;color:#fff;display:flex;align-items:end}.hero-card:first-child{grid-column:1/-1;min-height:356px}.hero-card>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}.hero-card:after{content:'';position:absolute;inset:20% 0 0;background:linear-gradient(transparent,rgba(0,0,0,.87))}.hero-copy{position:relative;z-index:1;padding:16px;width:100%}.hero-copy h2{font-size:18px;line-height:1.45;font-weight:700;margin-bottom:8px}.byline{display:flex;align-items:center;gap:5px;font-size:13px;line-height:20px;margin-top:6px}.byline .avatar{width:17px;height:17px;border-radius:50%;background:#fff;color:var(--teal);display:inline-grid;place-items:center;font-size:11px;font-weight:800}.byline .verified{color:var(--teal);font-size:12px}.time{display:block;color:var(--muted);font-size:12px;margin-top:8px}.hero-card .time{color:#fff}.hero-card:hover{color:#fff}.slider-controls{display:flex;gap:5px;justify-content:center;position:absolute;bottom:8px;left:0;right:0;z-index:3}.slider-controls button{width:14px;height:4px;padding:0;border:0;background:#fff8;border-radius:5px}.slider-controls button.active{background:#fff;width:24px}.hero-next{position:absolute;right:4px;top:30%;z-index:3;border:0;border-radius:50%;background:#0004;color:#fff;width:28px;height:28px}.panel{background:var(--paper);border:1px solid var(--line);border-radius:6px;overflow:hidden;margin-bottom:20px}.section-head{display:flex;justify-content:space-between;align-items:center;padding:13px 12px;border-bottom:1px solid var(--line);gap:10px;position:relative}.section-head:before{content:'';width:5px;height:24px;background:var(--red);position:absolute;left:0;top:18px}.section-head h2{font-size:24px;line-height:30px;font-weight:700}.section-head small{font-size:10px;letter-spacing:2px;color:var(--accent);display:block}.section-head a{font-size:13px;color:#287593;white-space:nowrap}.trend-list{padding:0 10px;max-height:540px;overflow:auto;scrollbar-width:thin}.news-row{display:flex;gap:15px;padding:16px 0;border-bottom:1px solid var(--line)}.news-row:last-child{border-bottom:0}.news-row .row-copy{flex:1;min-width:0}.news-row h3{font-size:16px;line-height:1.5;font-weight:600}.news-row img{object-fit:cover;width:80px;height:80px;flex-shrink:0;border-radius:6px}.news-row .byline{font-size:12px;color:#666}.section-space{margin-top:24px}.video-panel{background:#222;color:#fff;border-radius:6px;padding:0 16px 16px;margin:24px 0}.video-panel .section-head{padding-left:0;border:0}.video-panel .section-head:before{display:none}.video-panel .section-head a{color:#fff}.video-strip{display:grid;grid-auto-flow:column;grid-auto-columns:calc((100% - 48px)/4);gap:16px;overflow:auto;scrollbar-width:thin;padding-bottom:12px}.video-card{position:relative;display:block;border-radius:6px;overflow:hidden;background:#333;aspect-ratio:9/15}.video-card>img{width:100%;height:100%;object-fit:cover}.video-card:after{content:'';position:absolute;inset:40% 0 0;background:linear-gradient(transparent,#000e)}.video-card .video-copy{position:absolute;bottom:0;padding:12px;z-index:1}.video-copy h3{font-size:15px;line-height:1.4}.video-copy small{font-size:11px}.video-card .play-mark{width:36px;height:36px;font-size:16px;border-radius:50%;top:35%}.duo{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:24px 0}.duo .panel{margin:0}.duo .section-head{background:#00427e;color:#fff}.duo>div:nth-child(2) .section-head{background:#008b70}.duo .section-head:before{display:none}.duo .section-head a{color:white}.duo .news-row{margin:0 14px}.duo .news-row img{width:90px;height:65px}.feed-list{padding:0 16px}.feed-list .news-row img{width:180px;height:120px}.feed-list .news-row h3{font-size:20px;line-height:1.35}.feed-list .snippet{font-size:14px;color:#777;margin-top:8px}.grid-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;padding:16px}.grid-card img{width:100%;aspect-ratio:16/10;object-fit:cover;border-radius:4px}.grid-card h3{font-size:18px;line-height:1.4;margin-top:10px}.load-more{display:block;text-align:center;margin:16px auto;border:1px solid var(--accent);border-radius:3px;color:var(--accent);background:var(--paper);padding:9px 28px;font-size:14px}.empty-state{padding:24px;color:var(--muted);font-size:14px}.home-only{display:none}.is-home .home-only{display:block}.is-home .home-only.duo{display:grid}.enhanced-home .native-posts{display:none}.article-view{background:var(--paper)}.article-view .main-wrap{padding-top:28px}.article-layout{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,1fr);gap:24px}.breadcrumb{font-size:13px;color:#666;margin:25px 0 40px}.breadcrumb a:last-child{font-weight:600;color:var(--ink)}.article{padding:0 12px}.article h1{font-size:34px;line-height:42px;font-weight:700;margin-bottom:30px}.article-meta{font-size:14px;color:#777;margin:10px 0 20px}.article-author{font-weight:700;font-size:14px}.article-author .verified{color:var(--teal)}.share-bar{display:flex;align-items:center;gap:14px;padding:10px 0 20px}.share-bar a,.share-bar button{display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;border:1px solid var(--line);border-radius:50%;background:var(--paper);color:var(--muted)}.share-bar .wa{background:#08ba8a;color:#fff;border:0;margin-left:auto}.share-status{font-size:12px;color:var(--accent);min-height:18px}.post-body{font:20px/1.6 'PT Serif',Georgia,serif;overflow-wrap:anywhere}.post-body p,.post-body>div,.post-body ul,.post-body ol{margin:0 0 24px}.post-body img{height:auto;max-width:100%;margin:auto}.post-body iframe,.post-body video{max-width:100%}.post-body table{display:block;max-width:100%;overflow:auto}.post-body h2{font:700 26px/1.4 Heebo,Arial,sans-serif;margin:32px 0 16px}.post-body h3{font:700 23px/1.4 Heebo,Arial,sans-serif;margin:24px 0 12px}.post-body a{color:var(--accent);text-decoration:underline}.post-body blockquote{border-left:4px solid var(--teal);padding:12px 20px;margin:20px 0;background:#f3f9f9}.post-body pre{overflow:auto;font-size:14px}.post-body .tr-caption,.post-body figcaption{font:12px/1.5 Heebo,sans-serif;color:#888;margin-top:8px}.article-tags{display:flex;gap:8px;flex-wrap:wrap;border-top:1px solid var(--line);padding:24px 0;margin-top:24px}.article-tags a{font-size:13px;border-radius:24px;background:#eee;padding:6px 16px}.comments{font-size:14px;border-top:1px solid var(--line);padding:24px 0}.comments h2{font-size:22px;margin-bottom:15px}.comment{padding:15px 0;border-bottom:1px solid var(--line)}.comment-body{margin-top:8px}.native-card{background:var(--paper);border-bottom:1px solid var(--line);padding:20px}.native-card h2{font-size:24px;margin-bottom:8px}.native-card img{width:180px;aspect-ratio:16/10;object-fit:cover;float:right;margin:0 0 10px 16px}.native-card:after{content:'';display:block;clear:both}.page-title{font-size:36px;text-align:center;margin:20px 0 28px}.pager{display:flex;gap:12px;justify-content:center;margin:24px 0}.pager a{padding:9px 20px;background:var(--paper);border:1px solid var(--line);border-radius:3px;font-size:14px}.site-footer{background:#e5e5e5;margin-top:36px;padding:36px 0 18px;color:#666}.footer-inner{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:36px;font-size:13px}.footer-inner h3{color:var(--ink);font-size:15px;margin-bottom:12px}.footer-links{display:grid;grid-template-columns:1fr 1fr;gap:8px}.footer-about p{margin-top:18px;max-width:310px}.copyright{border-top:1px solid #ccc;margin-top:28px;padding-top:15px;font-size:11px;display:flex;justify-content:space-between}.back-top{position:fixed;bottom:20px;right:20px;background:var(--accent);border:0;color:#fff;width:36px;height:36px;border-radius:50%;z-index:20}.mobile-bottom{display:none}.error-panel{padding:40px;text-align:center;background:var(--paper)}
+.dark{--bg:#17191a;--paper:#242728;--ink:#eee;--muted:#a8a8a8;--line:#373b3c}.dark .search-form input,.dark .sub-nav a,.dark .article-tags a{background:#343838;color:#ddd}.dark .ad-placeholder{background:#252929;border-color:#303535;color:#aaa}.dark .site-footer{background:#202526}.dark .logo small{color:#aaa}.dark .post-body blockquote{background:#293b3c}.dark .news-row .byline{color:#bbb}
+body#layout{background:#fff}body#layout .site-header,body#layout .side-ad{position:static!important;width:auto!important}body#layout .wrap{width:100%!important}body#layout .home-only,body#layout .config-data,body#layout .native-posts{display:block!important}body#layout .lead-layout,body#layout .content-layout,body#layout .duo{display:block!important}body#layout .section{border:1px dashed #aaa;padding:10px;margin:8px}body#layout .header-actions,body#layout .mobile-bottom{display:none!important}body#layout .ad-placeholder{min-height:40px;height:auto}body#layout .header-top{height:auto;display:block}body#layout .widget{min-height:35px}
+@media(min-width:701px) and (max-width:1050px){.main-nav{gap:16px;overflow-x:auto}.main-nav .more-menu{display:none}.header-top{gap:24px}.header-actions{gap:16px}.search-form{width:260px}.header-actions .write-link{display:none}}
+@media(max-width:1360px){.side-ad{display:none}}
+@media(max-width:700px){.wrap{padding:0 12px}.header-top{height:58px;gap:15px}.logo{min-width:126px}.logo strong{font-size:29px}.logo small{font-size:7px;line-height:10px}.header-top .search-form{position:absolute;left:0;right:0;top:58px;display:none;width:100%;padding:10px;background:var(--paper);border-bottom:1px solid var(--line)}.header-top .search-form.open{display:block}.search-form button{top:15px;left:22px}.header-actions{gap:18px}.header-actions .home-link,.write-link,.login-link{display:none}.mobile-menu{display:flex}.header-actions svg{width:21px;height:21px}.main-nav{gap:22px;overflow-x:auto;scrollbar-width:none;font-size:14px;min-height:38px}.main-nav .more-menu{display:none}.sub-nav{font-size:12px;gap:6px;padding:5px 0 8px}.sub-nav a{line-height:23px}.site-header .wrap{padding:0 16px}.main-wrap{padding-top:16px}.main-wrap>[data-ad-slot] .ad-placeholder{min-height:100px;border:0}.main-wrap>[data-ad-slot]{margin:0 -12px 14px}.ad-placeholder{letter-spacing:1px}.stories{gap:12px;margin-bottom:16px}.story{flex-basis:72px;font-size:11px}.story-ring{width:72px;height:72px;border-width:2px;padding:3px}.live-link{padding:12px;gap:12px;min-height:145px}.live-copy h2{font-size:16px;margin:8px 0}.live-copy small{font-size:10px;letter-spacing:1px}.live-copy span{font-size:10px}.play-mark{width:40px;height:32px;font-size:17px}.topics{padding:0;margin:12px 0}.topics a{padding:6px 12px;font-size:11px}.lead-layout,.content-layout,.article-layout{grid-template-columns:minmax(0,1fr)}.hero-card:first-child{min-height:245px}.hero-card{min-height:180px}.hero-copy{padding:12px}.hero-copy h2{font-size:14px;line-height:1.4}.hero-card:first-child h2{font-size:18px}.hero-copy .byline{font-size:11px}.hero-copy .time{font-size:10px;margin-top:5px}.hero-grid{gap:4px}.lead-layout .panel{margin-top:8px}.trend-list{max-height:none}.section-head h2{font-size:22px}.section-head a{font-size:12px}.news-row h3{font-size:15px}.news-row img{width:85px;height:80px}.video-panel{margin:20px -12px;padding:0 12px 12px;border-radius:0}.video-strip{grid-auto-columns:44%;gap:10px}.duo{grid-template-columns:1fr;margin:20px 0}.is-home .home-only.duo{display:grid}.grid-cards{grid-template-columns:1fr 1fr;gap:12px;padding:12px}.grid-card h3{font-size:15px}.feed-list{padding:0 12px}.feed-list .news-row img{width:105px;height:85px}.feed-list .news-row h3{font-size:17px}.feed-list .snippet{display:none}.content-layout>aside{display:none}.article-layout>aside{display:none}.article{padding:0 4px}.breadcrumb{margin:10px 0 25px;font-size:12px}.article h1{font-size:27px;line-height:1.3;margin-bottom:22px}.article-meta{font-size:12px}.post-body{font-size:18px;line-height:1.65}.post-body p{margin-bottom:22px}.article-view .main-wrap{padding-top:16px}.page-title{font-size:28px;margin:12px 0 20px}.native-card{padding:16px}.native-card h2{font-size:20px}.native-card img{width:105px}.footer-inner{grid-template-columns:1fr;gap:24px}.copyright{display:block;line-height:2}.site-footer{padding-bottom:80px}.mobile-bottom{display:flex;position:fixed;bottom:0;left:0;right:0;z-index:45;height:57px;background:var(--paper);border-top:1px solid var(--line);justify-content:space-around;align-items:center}.mobile-bottom a{display:flex;flex-direction:column;align-items:center;gap:2px;font-size:10px;color:var(--muted)}.mobile-bottom a:first-child{color:var(--accent)}.mobile-bottom svg{width:21px;height:21px}.back-top{bottom:72px;right:14px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}
+
+.post-body figure{margin:0 0 24px}
+
+.header-top>#Brand{display:none}.feed-block>.section{margin:0}.ad-slot>.section{margin:0}
+
+#primary-links{display:contents}.site-brand-slot{flex:0 0 auto}.ad-slot iframe{max-width:100%}.static-page .article-meta,.static-page .article-author{display:none}
+
+
+/* SaeMag original SVG ring icons, shared by all article share bars. */
+.sae-social-library{position:absolute;width:0;height:0;overflow:hidden;pointer-events:none}
+.share-bar{gap:8px;flex-wrap:wrap}
+.share-bar .sae-share-link{width:44px;height:44px;border:0;background:transparent;color:var(--ink);margin:0}
+.sae-social-icon{width:36px;height:36px;stroke:none;fill:none}
+.share-bar .sae-copy{width:auto;min-height:40px;height:auto;gap:7px;border-radius:24px;padding:8px 12px;color:var(--ink);font-size:13px}
+.sae-copy svg{width:18px;height:18px;flex-shrink:0}
+.sae-share-link:hover{opacity:.75}
+.sm-ad{text-align:center;line-height:0}.sm-ad .widget-content{line-height:normal}
+.sm-ph{display:flex;align-items:center;justify-content:center;margin:auto;max-width:100%;border:1px dashed var(--line);color:var(--muted);font:13px/1.3 Heebo,Arial,sans-serif;text-align:center;background:repeating-linear-gradient(45deg,#8881,#8881 10px,transparent 10px,transparent 20px)}
+.sm-vt{display:none;background:#000;position:relative}
+.sm-vt-bar{display:flex;align-items:center;justify-content:center;height:26px;color:#fff;font-size:11px;letter-spacing:.3px;position:relative;z-index:3;background:#000}
+.sm-vt-bar .sm-x{position:absolute;top:1px;right:8px;width:22px;height:22px;border:0;border-radius:50%;background:#333;color:#fff;padding:0;line-height:1}
+.sm-px{position:relative;clip-path:inset(0 0 0 0);overflow:hidden}
+.sm-vt .sm-px{height:330px}.sm-vt .sm-px-in{top:191px}
+.sm-px-in{position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);width:max-content;max-width:calc(100vw - 24px)}
+.sm-vt .sm-ph{width:325px;height:300px;background-color:#111;color:#bbb;border-color:#333}
+.sm-adpx{margin:24px 0;clear:both}.post-body>.sm-adpx{margin:24px 0}
+.sm-adpx .sm-px{height:630px;background:#8881}
+.sm-adpx .sm-ph{width:300px;height:600px;background-color:var(--paper)}
+@media(max-width:991px){.sm-vt{display:block}.sm-vt.closed{display:none}}
+@media(max-width:600px){.sm-adpx .sm-px{height:520px}}
+]]><![CDATA[
+.tbd-license-gate[hidden],.tbd-license-shield[hidden],.tbd-license-status[hidden],#tbd-license-context[hidden]{display:none!important}
+.tbd-license-gate,.tbd-license-gate *,.tbd-license-status,.tbd-license-status *{box-sizing:border-box}
+.tbd-license-gate{position:fixed;inset:0;z-index:2147483000;display:grid;place-items:center;overflow:auto;padding:24px 16px;background:rgba(15,23,42,.55);font-family:Arial,system-ui,sans-serif;color:#172339;text-align:left;line-height:1.6}
+.tbd-license-card{width:100%;max-width:460px;margin:auto;padding:30px;background:#fff;border:1px solid #e5eaf2;border-radius:22px;box-shadow:0 24px 80px #0f172a40}
+.tbd-license-brand{display:inline-flex;align-items:center;gap:8px;color:#172339!important;text-decoration:none!important;font:bold 21px/1.3 Arial,sans-serif;letter-spacing:-.6px}
+.tbd-license-brand b{color:#2456d9}.tbd-license-logo{position:relative;display:grid;place-items:center;width:30px;height:30px;border-radius:9px;color:#fff;background:#2456d9;font:bold 24px/1 Arial,sans-serif;letter-spacing:0}.tbd-license-logo>span{position:absolute;right:5px;bottom:5px;width:6px;height:6px;border-radius:50%;background:#ffb300}
+.tbd-license-symbol{display:grid;place-items:center;width:54px;height:54px;margin-top:28px;margin-bottom:16px;border-radius:15px;background:#edf2ff;color:#2456d9}
+.tbd-license-eyebrow{margin:0 0 8px!important;color:#526178;font:bold 11px/1.5 Arial,sans-serif;letter-spacing:1.3px}
+.tbd-license-card h2{margin:0 0 14px!important;padding:0;color:#172339;font:bold 26px/1.25 Arial,sans-serif;letter-spacing:-.7px;overflow-wrap:anywhere}
+.tbd-license-card #tbd-license-description{margin:0 0 24px!important;color:#526178;font:15px/1.7 Arial,sans-serif;overflow-wrap:anywhere}
+.tbd-license-card strong{color:#172339;font-weight:700}
+.tbd-license-actions{display:grid;gap:10px}
+.tbd-license-actions a{display:flex;justify-content:center;align-items:center;min-height:48px;padding:12px 16px;border:1px solid #2456d9;border-radius:11px;background:#2456d9;color:#fff!important;text-decoration:none!important;font:bold 15px/1.45 Arial,sans-serif;text-align:center;overflow-wrap:anywhere}
+.tbd-license-actions a:hover{background:#173fa9;border-color:#173fa9}.tbd-license-actions .tbd-license-secondary{background:#fff;color:#2456d9!important;border-color:#d3ddef}.tbd-license-actions .tbd-license-secondary:hover{background:#f5f7fb}
+#tbd-license-check{display:block;margin:18px auto 0;padding:6px 3px;border:0;background:transparent;color:#526178;font:14px/1.5 Arial,sans-serif;text-align:center;text-decoration:underline;text-underline-offset:4px;cursor:pointer}
+.tbd-license-gate :focus-visible,.tbd-license-status button:focus-visible{outline:3px solid #9db5ff;outline-offset:3px}
+.tbd-license-modal{overflow:hidden}.tbd-license-shield{position:fixed;inset:0;z-index:2147482000;background:transparent}
+.tbd-license-status{position:fixed;z-index:2147483001;left:50%;bottom:18px;transform:translateX(-50%);width:calc(100% - 32px);max-width:440px;padding:16px 18px;border:1px solid #e5eaf2;border-radius:12px;background:#fff;color:#526178;box-shadow:0 6px 30px #0f172a20;font:14px/1.6 Arial,sans-serif}
+.tbd-license-status button{display:block;margin-top:8px;padding:7px 12px;border:0;border-radius:8px;background:#2456d9;color:#fff;font:bold 13px/1.5 Arial,sans-serif;cursor:pointer}
+@media(max-width:380px){.tbd-license-card{padding:24px 20px}.tbd-license-card h2{font-size:23px}}
+
+
+/* tb-identity-presentation-b-20261107 */
+[data-tb-logo-mirror] img{display:block;width:auto;max-width:100%;height:auto;max-height:48px;object-fit:contain} .tb-identity-wordmark{font:700 28px/1.2 Arial,sans-serif;white-space:nowrap}
+#brand-name img{display:block;width:auto;height:auto;max-width:170px;max-height:48px;object-fit:contain}.footer-about [data-tb-logo-mirror] img{max-width:190px;max-height:52px}@media(max-width:700px){#brand-name img{max-width:155px;max-height:42px}}
+
+/* Native license input is invisible on the public site. */
+.tb-license-settings{display:none!important}
+]]></b:skin>
+<b:template-skin><![CDATA[
+/* TemaBlogger License Key: native Layout controls remain editable. */
+body#layout .tb-license-settings{display:block!important;width:auto!important;clear:both!important;margin:0 0 16px!important;padding:12px!important;border:1px solid #d8e3f5!important;border-radius:12px!important;background:#f0f5ff!important}
+body#layout .tb-license-settings .add_widget{display:none!important}
+body#layout .section{display:block;border:1px dashed #aaa;margin:8px;padding:8px}body#layout .side-ad{position:static}
+body#layout .site-header,body#layout .wrap,body#layout .home-only,body#layout .portal-lead,body#layout .related-posts,body#layout .native-posts,body#layout .lead-layout,body#layout .content-layout,body#layout .duo,body#layout .side-ad,body#layout .feed-block,body#layout .header-top,body#layout #Brand{display:block!important;position:static!important;width:auto!important;height:auto!important;overflow:visible!important}
+body#layout .section{min-height:90px!important}
+body#layout .widget{display:block!important;visibility:visible!important;min-height:60px}
+body#layout .block-output,body#layout .ad-placeholder,body#layout .logo,body#layout .search-form{display:none!important}
+
+body#layout .sm-vt,body#layout .sm-adhold{display:block!important;position:static!important;width:auto!important}
+body#layout .sm-px,body#layout .sm-px-in{position:static!important;transform:none!important;clip-path:none!important;overflow:visible!important;width:auto!important;max-width:none!important;height:auto!important}
+body#layout .sm-ph,body#layout .sm-vt-bar,body#layout .sae-social-library{display:none!important}
+]]></b:template-skin>
+<style id='tb-free-edition-style'>/* TemaBlogger Free: upgrade removes this verified block. */
+body:not(#layout) #HTML900,body:not(#layout) #HTML6,body:not(#layout) #HTML7,body:not(#layout) #HTML5,body:not(#layout) #HTML901,body:not(#layout) #HTML25,body:not(#layout) #HTML19,body:not(#layout) #HTML21,body:not(#layout) .ad-slot,body:not(#layout) .sm-adhold,body:not(#layout) .sm-px,body:not(#layout) .sm-adpx{display:none!important}
+body:not(#layout) .tb-free-lock-note,body:not(#layout) .tb-free-edition-note{display:none!important}
+body#layout #HTML98 .editlink,body#layout #HTML98 .widget-control,body#layout #HTML98 .item-control,body#layout #HTML900 .editlink,body#layout #HTML900 .widget-control,body#layout #HTML900 .item-control,body#layout #HTML6 .editlink,body#layout #HTML6 .widget-control,body#layout #HTML6 .item-control,body#layout #HTML7 .editlink,body#layout #HTML7 .widget-control,body#layout #HTML7 .item-control,body#layout #HTML5 .editlink,body#layout #HTML5 .widget-control,body#layout #HTML5 .item-control,body#layout #HTML901 .editlink,body#layout #HTML901 .widget-control,body#layout #HTML901 .item-control,body#layout #HTML25 .editlink,body#layout #HTML25 .widget-control,body#layout #HTML25 .item-control,body#layout #HTML19 .editlink,body#layout #HTML19 .widget-control,body#layout #HTML19 .item-control,body#layout #HTML21 .editlink,body#layout #HTML21 .widget-control,body#layout #HTML21 .item-control{display:none!important}
+body#layout .tb-free-lock-note{display:block;color:#52627a;font-size:13px}
+</style>
+<meta content='free' name='temablogger-edition'/>
+</head>
+<body expr:class='data:view.isHomepage ? &quot;is-home&quot; : (data:view.isSingleItem ? &quot;article-view&quot; : &quot;is-list&quot;)'>
+<!-- TemaBlogger key-domain-cache-v3: native license input; old widgets remain unchanged. -->
+<b:section class='tb-license-settings' id='tbLicenseSettings' name='Lisensi Tema Blogger' showaddelement='yes'>
+  <b:widget id='HTML98' locked='true' title='License Key' type='HTML' version='2' visible='true'>
+    <b:widget-settings><b:widget-setting name='content'></b:widget-setting></b:widget-settings>
+    <b:includable id='main'><div hidden='hidden' class='tb-free-edition-note'>Versi Free. Untuk iklan dan pengaturan kredit footer, gunakan paket Premium.</div></b:includable>
+  </b:widget>
+</b:section>
+
+<!-- sae-theme: Saeparan v1.4.0 | 2026-10-15 -->
+<b:class cond='data:view.isPost' name='sae-is-post'/>
+<svg aria-hidden='true' class='sae-social-library' focusable='false' xmlns='http://www.w3.org/2000/svg'><defs><symbol id='sae-social-whatsapp' viewBox='0 0 205 205'><path d='M102.44 204.49H101.99C45.7532 204.49 0 158.723 0 102.47V102.02C0 45.7667 45.7532 0 101.99 0H102.44C158.676 0 204.429 45.7667 204.429 102.02V102.47C204.429 158.723 158.676 204.49 102.44 204.49ZM101.99 6.92176C49.566 6.92176 6.91972 49.5806 6.91972 102.02V102.47C6.91972 154.909 49.566 197.568 101.99 197.568H102.44C154.863 197.568 197.51 154.909 197.51 102.47V102.02C197.51 49.5806 154.863 6.92176 102.44 6.92176H101.99Z' fill='#00E510'/><path d='M121.469 131.14C96.1911 131.14 75.6256 110.561 75.6187 85.2762C75.6256 78.8666 80.8431 73.6546 87.237 73.6546C87.8943 73.6546 88.5447 73.71 89.1675 73.8207C90.5376 74.0491 91.8386 74.5129 93.0357 75.212C93.2087 75.3158 93.3263 75.4819 93.354 75.6757L96.025 92.5164C96.0596 92.7102 95.9973 92.9109 95.8658 93.0562C94.3919 94.6898 92.5098 95.8665 90.4131 96.4549L89.4028 96.7387L89.7834 97.7146C93.2294 106.491 100.246 113.503 109.027 116.964L110.003 117.352L110.287 116.341C110.875 114.244 112.051 112.361 113.684 110.887C113.802 110.776 113.961 110.721 114.12 110.721C114.155 110.721 114.189 110.721 114.231 110.728L131.066 113.399C131.267 113.434 131.433 113.545 131.537 113.718C132.229 114.915 132.693 116.223 132.928 117.594C133.039 118.203 133.087 118.847 133.087 119.518C133.087 125.921 127.876 131.133 121.469 131.14Z' fill='#00E510'/><path d='M166.295 96.6971C164.932 81.2892 157.874 66.9958 146.421 56.454C134.9 45.8498 119.953 40.0078 104.322 40.0078C70.0137 40.0078 42.0996 67.9303 42.0996 102.248C42.0996 113.766 45.2757 124.986 51.289 134.76L37.8785 164.454L80.8155 159.879C88.2818 162.938 96.1841 164.489 104.315 164.489C106.453 164.489 108.647 164.378 110.847 164.15C112.785 163.942 114.743 163.637 116.667 163.25C145.397 157.442 166.371 131.936 166.537 102.581V102.248C166.537 100.379 166.454 98.5106 166.288 96.704L166.295 96.6971ZM82.4693 146.845L58.7139 149.379L65.8066 133.659L64.388 131.756C64.2842 131.617 64.1805 131.479 64.0628 131.32C57.9043 122.813 54.6519 112.763 54.6519 102.255C54.6519 74.8589 76.9335 52.5709 104.322 52.5709C129.98 52.5709 151.729 72.5955 153.825 98.1576C153.936 99.5281 153.998 100.906 153.998 102.262C153.998 102.65 153.992 103.03 153.985 103.439C153.459 126.357 137.453 145.821 115.061 150.777C113.352 151.158 111.601 151.448 109.858 151.635C108.045 151.843 106.183 151.947 104.336 151.947C97.7549 151.947 91.3611 150.673 85.3202 148.153C84.649 147.883 83.9916 147.593 83.3757 147.295L82.4762 146.859L82.4693 146.845Z' fill='#00E510'/></symbol><symbol id='sae-social-facebook' viewBox='0 0 205 205'><path d='M102.44 204.49H101.99C45.7532 204.49 0 158.723 0 102.47V102.02C0 45.7667 45.7532 0 101.99 0H102.44C158.676 0 204.429 45.7667 204.429 102.02V102.47C204.429 158.723 158.676 204.49 102.44 204.49ZM101.99 6.92176C49.566 6.92176 6.91972 49.5806 6.91972 102.02V102.47C6.91972 154.909 49.566 197.568 101.99 197.568H102.44C154.863 197.568 197.51 154.909 197.51 102.47V102.02C197.51 49.5806 154.863 6.92176 102.44 6.92176H101.99Z' fill='#1877F2'/><path d='M115.968 79.3166V100.836H142.581L138.367 129.825H115.968V196.613C111.477 197.236 106.882 197.561 102.218 197.561C96.8347 197.561 91.548 197.132 86.3997 196.301V129.825H61.8555V100.836H86.3997V74.506C86.3997 58.1706 99.6372 44.9224 115.975 44.9224V44.9362C116.023 44.9362 116.065 44.9224 116.113 44.9224H142.588V69.993H125.289C120.147 69.993 115.975 74.1668 115.975 79.3096L115.968 79.3166Z' fill='#1877F2'/></symbol><symbol id='sae-social-x' viewBox='0 0 205 205'><path d='M102.44 204.49H101.99C45.7532 204.49 0 158.723 0 102.47V102.02C0 45.7667 45.7532 0 101.99 0H102.44C158.676 0 204.429 45.7667 204.429 102.02V102.47C204.429 158.723 158.676 204.49 102.44 204.49ZM101.99 6.92176C49.566 6.92176 6.91972 49.5806 6.91972 102.02V102.47C6.91972 154.909 49.566 197.568 101.99 197.568H102.44C154.863 197.568 197.51 154.909 197.51 102.47V102.02C197.51 49.5806 154.863 6.92176 102.44 6.92176H101.99Z' fill='currentColor'/><path d='M43.5182 48.1894L89.0638 109.101L43.2345 158.626H53.5518L93.6793 115.268L126.098 158.626H161.202L113.096 94.2883L155.756 48.1894H145.439L108.487 88.121L78.6289 48.1894H43.525H43.5182ZM58.6862 55.7895H74.8092L146.02 151.026H129.897L58.6862 55.7895Z' fill='currentColor'/></symbol><symbol id='sae-social-telegram' viewBox='0 0 205 205'><path d='M102.44 204.49H101.99C45.7532 204.49 0 158.723 0 102.47V102.02C0 45.7667 45.7532 0 101.99 0H102.44C158.676 0 204.429 45.7667 204.429 102.02V102.47C204.429 158.723 158.676 204.49 102.44 204.49ZM101.99 6.92176C49.566 6.92176 6.91972 49.5806 6.91972 102.02V102.47C6.91972 154.909 49.566 197.568 101.99 197.568H102.44C154.863 197.568 197.51 154.909 197.51 102.47V102.02C197.51 49.5806 154.863 6.92176 102.44 6.92176H101.99Z' fill='#00B0F2'/><path d='M40.8677 98.8775C41.1445 98.7391 41.4214 98.6076 41.6913 98.483C46.3829 96.3096 51.1367 94.2746 55.8837 92.2396C56.1397 92.2396 56.5686 91.9419 56.8108 91.845C57.1775 91.6858 57.5443 91.5335 57.9111 91.3743C58.6169 91.0698 59.3228 90.7721 60.0216 90.4675C61.4333 89.8654 62.8379 89.2632 64.2495 88.661C67.0658 87.4566 69.8821 86.2522 72.6985 85.0409C78.3311 82.6321 83.9708 80.2165 89.6035 77.8077C95.2361 75.3989 100.876 72.9832 106.508 70.5744C112.141 68.1656 117.78 65.75 123.413 63.3412C129.046 60.9324 134.685 58.5167 140.318 56.1079C141.571 55.568 142.927 54.7652 144.269 54.5298C145.397 54.3291 146.497 53.9414 147.632 53.7269C149.784 53.3185 152.158 53.1523 154.22 54.0452C154.932 54.3567 155.59 54.7928 156.137 55.3396C158.752 57.9283 158.385 62.1783 157.832 65.8192C153.978 91.1943 150.123 116.576 146.262 141.952C145.736 145.433 145.017 149.254 142.269 151.455C139.944 153.317 136.637 153.525 133.765 152.736C130.893 151.94 128.361 150.272 125.877 148.631C115.573 141.806 105.263 134.981 94.9593 128.157C92.5097 126.537 89.7834 124.419 89.8111 121.477C89.8249 119.705 90.8836 118.127 91.963 116.722C100.917 105.038 113.836 97.0086 123.448 85.8646C124.804 84.2933 125.87 81.4554 124.008 80.5487C122.901 80.0088 121.628 80.7425 120.618 81.4416C107.913 90.2669 95.2154 99.099 82.5107 107.924C78.3658 110.804 74.0203 113.766 69.0242 114.472C64.5541 115.109 60.0563 113.863 55.7314 112.59C52.1055 111.524 48.4864 110.43 44.8812 109.302C42.9644 108.706 40.9854 108.063 39.5046 106.713C38.0237 105.363 37.1727 103.093 38.0654 101.293C38.6259 100.165 39.7123 99.452 40.854 98.8706L40.8677 98.8775Z' fill='#00B0F2'/></symbol></defs></svg>
+<div class='sm-vt' id='sm-vt'><div class='sm-vt-bar'>Scroll untuk baca artikel<button aria-label='Tutup iklan atas header' class='sm-x' data-close='sm-vt' type='button'>&#215;</button></div><div class='sm-px'><div class='sm-px-in'><b:section class='sae-section sm-ad' id='AdTopHeader' name='Iklan Atas Header HP (325x300)' showaddelement='no'>
+  <b:widget id='HTML900' locked='true' title='Iklan Atas Header HP (325x300)' type='HTML' version='2' visible='true'>
+    <b:includable id='main'><div hidden='hidden' class='tb-free-lock-note' data-tb-free-locked='ads'>Iklan tersedia pada versi Premium.</div></b:includable>
+  </b:widget>
+</b:section></div></div></div>
+<a class='skip' href='#main-content'>Langsung ke konten</a>
+<header class='site-header'><div class='wrap'>
+<div class='header-top'><a expr:aria-label='data:blog.title + &quot;, beranda&quot;' class='logo' expr:href='data:blog.homepageUrl'><small>Cerita Hari Ini, Perspektif Baru</small><strong id='brand-name'><data:blog.title/></strong></a><b:section class='sae-section' id='Brand' name='Logo Saeparan' showaddelement='yes'>
+<b:widget id='HTML1' locked='false' title='Logo Saeparan' type='HTML' version='2' visible='true'>
+  <b:includable id='main'><div class='config-data'><data:content/></div><b:include name='quickedit'/></b:includable>
+</b:widget>
+</b:section>
+<form action='/search' class='search-form' role='search'><input aria-label='Cari berita' name='q' placeholder='Cari di sini...' type='search'/><button aria-label='Cari' type='submit'><svg aria-hidden='true' viewBox='0 0 24 24'><circle cx='10.5' cy='10.5' r='7.5'/><path d='m16 16 5 5'/></svg></button></form>
+<div class='header-actions'><a aria-label='Beranda' class='icon-button home-link' href='/'><svg aria-hidden='true' viewBox='0 0 24 24'><path d='m3 10 9-7 9 7v11h-6v-8H9v8H3z'/></svg></a><button aria-label='Ganti mode gelap' class='icon-button' data-theme='true' type='button'><svg aria-hidden='true' viewBox='0 0 24 24'><path d='M21 13A9 9 0 0 1 11 3a9 9 0 1 0 10 10z'/></svg></button><button aria-label='Buka pencarian' class='icon-button mobile-menu' data-search='true' type='button'><svg aria-hidden='true' viewBox='0 0 24 24'><circle cx='10.5' cy='10.5' r='7.5'/><path d='m16 16 5 5'/></svg></button><a aria-label='Langganan RSS' class='icon-button' href='/feeds/posts/default'><svg aria-hidden='true' viewBox='0 0 24 24'><path d='M5 16h14l-2-3V9a5 5 0 0 0-10 0v4zM10 20h4'/></svg></a><a class='pill-button login-link' href='https://www.blogger.com/'>Masuk</a><a class='pill-button write-link' href='https://www.blogger.com/'>Buat Tulisan</a></div></div>
+<nav aria-label='Kanal utama' class='main-nav'><div id='primary-links'> </div><details class='more-menu'><summary>Lainnya &#8942;</summary><div class='dropdown' id='drawer-links'> </div></details></nav>
+<nav aria-label='Topik pilihan' class='sub-nav' id='secondary-links'> </nav>
+</div></header>
+<b:section class='sae-section' id='MainMenu' name='Menu Utama: Nama|URL' showaddelement='yes'>
+  <b:widget id='HTML2' locked='false' title='Menu Utama: Nama|URL' type='HTML' version='2' visible='true'>
+    <b:includable id='main'><div class='config-data'><data:content/></div><b:include name='quickedit'/></b:includable>
+  </b:widget>
+</b:section><b:section class='sae-section' id='SubMenu' name='Menu Kedua: Nama|URL' showaddelement='yes'>
+<b:widget id='HTML3' locked='false' title='Menu Kedua: Nama|URL' type='HTML' version='2' visible='true'>
+  <b:includable id='main'><div class='config-data'><data:content/></div><b:include name='quickedit'/></b:includable>
+</b:widget>
+</b:section>
+<aside aria-label='Iklan kiri' class='side-ad left'><div class='ad-slot' data-ad-slot='true'><b:section class='sae-section' id='AdLeft' name='Iklan Kiri 160x600' showaddelement='yes'>
+  <b:widget id='HTML6' locked='true' title='Iklan Kiri 160x600' type='HTML' version='2' visible='true'>
+    <b:includable id='main'><div hidden='hidden' class='tb-free-lock-note' data-tb-free-locked='ads'>Iklan tersedia pada versi Premium.</div></b:includable>
+  </b:widget>
+</b:section><div class='ad-placeholder'><span>ADVERTISEMENT</span><b>160 x 600</b><span>SLOT IKLAN SAEPARAN</span></div></div></aside>
+<aside aria-label='Iklan kanan' class='side-ad right'><div class='ad-slot' data-ad-slot='true'><b:section class='sae-section' id='AdRight' name='Iklan Kanan 160x600' showaddelement='yes'>
+  <b:widget id='HTML7' locked='true' title='Iklan Kanan 160x600' type='HTML' version='2' visible='true'>
+    <b:includable id='main'><div hidden='hidden' class='tb-free-lock-note' data-tb-free-locked='ads'>Iklan tersedia pada versi Premium.</div></b:includable>
+  </b:widget>
+</b:section><div class='ad-placeholder'><span>ADVERTISEMENT</span><b>160 x 600</b><span>SLOT IKLAN SAEPARAN</span></div></div></aside>
+<main class='wrap main-wrap' id='main-content'><b:if cond='data:view.isHomepage'><h1 class='sr-only'><data:blog.title/></h1></b:if>
+<div class='ad-slot' data-ad-slot='true'><b:section class='sae-section' id='AdBillboard' name='Iklan Billboard 970x250' showaddelement='yes'>
+  <b:widget id='HTML5' locked='true' title='Iklan Billboard 970x250' type='HTML' version='2' visible='true'>
+    <b:includable id='main'><div hidden='hidden' class='tb-free-lock-note' data-tb-free-locked='ads'>Iklan tersedia pada versi Premium.</div></b:includable>
+  </b:widget>
+</b:section><div class='ad-placeholder'><span>ADVERTISEMENT</span><b>970 x 250</b><span>SLOT IKLAN SAEPARAN</span></div></div>
+<div class='home-only'><b:section class='sae-section' id='StoryMenu' name='Kanal Lingkaran: Nama|Label' showaddelement='yes'>
+  <b:widget id='HTML4' locked='false' title='Kanal Lingkaran: Nama|Label' type='HTML' version='2' visible='true'>
+    <b:includable id='main'><div class='config-data'><data:content/></div><b:include name='quickedit'/></b:includable>
+  </b:widget>
+</b:section><nav aria-label='Cerita kanal' class='stories' id='story-links'> </nav><div class='feed-block ' data-def='Video/live/1' data-title='Saeparan Hari Ini'><b:section class='sae-section' id='LiveStory' name='Saeparan Hari Ini' showaddelement='yes'>
+  <b:widget id='HTML8' locked='false' title='Saeparan Hari Ini' type='HTML' version='2' visible='true'>
+    <b:includable id='main'><div class='config-data'><data:content/></div><span class='block-title' hidden='hidden'><data:title/></span><b:include name='quickedit'/></b:includable>
+  </b:widget>
+</b:section><div aria-live='polite' class='block-output'> </div></div>
+<b:section class='sae-section' id='TopicMenu' name='Topik Utama: Nama|Label' showaddelement='yes'>
+  <b:widget id='HTML9' locked='false' title='Topik Utama: Nama|Label' type='HTML' version='2' visible='true'>
+    <b:includable id='main'><div class='config-data'><data:content/></div><b:include name='quickedit'/></b:includable>
+  </b:widget>
+</b:section><nav aria-label='Topik hangat' class='topics' id='topic-links'> </nav>
+</div><div expr:class='data:view.isHomepage ? &quot;portal-lead show&quot; : (data:view.isLabelSearch ? &quot;portal-lead show&quot; : &quot;portal-lead&quot;)'><b:if cond='data:view.isLabelSearch'><h1 class='page-title'><data:view.title/></h1></b:if><div class='lead-layout'><div><div class='feed-block hero-stage' data-def='recent/headline/9' data-title='Headline'><b:section class='sae-section' id='Headlines' name='Headline' showaddelement='yes'>
+  <b:widget id='HTML10' locked='false' title='Headline' type='HTML' version='2' visible='true'>
+    <b:includable id='main'><div class='config-data'><data:content/></div><span class='block-title' hidden='hidden'><data:title/></span><b:include name='quickedit'/></b:includable>
+  </b:widget>
+</b:section><div aria-live='polite' class='block-output'> </div></div></div><aside><div class='feed-block panel' data-def='Trending/list/5' data-title='Trending'><b:section class='sae-section' id='Trending' name='Trending' showaddelement='yes'>
+  <b:widget id='HTML11' locked='false' title='Trending' type='HTML' version='2' visible='true'>
+    <b:includable id='main'><div class='config-data'><data:content/></div><span class='block-title' hidden='hidden'><data:title/></span><b:include name='quickedit'/></b:includable>
+  </b:widget>
+</b:section><div aria-live='polite' class='block-output'> </div></div></aside></div></div>
+<div class='home-only'><div class='feed-block video-panel' data-def='Video/video/8' data-title='Video Story'><b:section class='sae-section' id='VideoStories' name='Video Story' showaddelement='yes'>
+  <b:widget id='HTML12' locked='false' title='Video Story' type='HTML' version='2' visible='true'>
+    <b:includable id='main'><div class='config-data'><data:content/></div><span class='block-title' hidden='hidden'><data:title/></span><b:include name='quickedit'/></b:includable>
+  </b:widget>
+</b:section><div aria-live='polite' class='block-output'> </div></div></div>
+<div class='duo home-only'><div><div class='feed-block panel' data-def='News/list/3' data-title='Nusantara Pulih'><b:section class='sae-section' id='Nusantara' name='Nusantara Pulih' showaddelement='yes'>
+  <b:widget id='HTML13' locked='false' title='Nusantara Pulih' type='HTML' version='2' visible='true'>
+    <b:includable id='main'><div class='config-data'><data:content/></div><span class='block-title' hidden='hidden'><data:title/></span><b:include name='quickedit'/></b:includable>
+  </b:widget>
+</b:section><div aria-live='polite' class='block-output'> </div></div></div><div><div class='feed-block panel' data-def='Lingkungan/list/3' data-title='Green Initiative'><b:section class='sae-section' id='Green' name='Green Initiative' showaddelement='yes'>
+  <b:widget id='HTML14' locked='false' title='Green Initiative' type='HTML' version='2' visible='true'>
+    <b:includable id='main'><div class='config-data'><data:content/></div><span class='block-title' hidden='hidden'><data:title/></span><b:include name='quickedit'/></b:includable>
+  </b:widget>
+</b:section><div aria-live='polite' class='block-output'> </div></div></div></div>
+<div class='content-layout section-space'><div>
+<b:if cond='data:view.isMultipleItems'><b:if cond='!data:view.isHomepage'><b:if cond='!data:view.isLabelSearch'><h1 class='page-title'><data:view.title/></h1></b:if></b:if></b:if>
+<b:if cond='data:view.isError'><div class='error-panel'><h1>Halaman tidak ditemukan</h1><p><a href='/'>Kembali ke beranda</a></p></div></b:if>
+<b:if cond='data:view.isSingleItem'><article class='article' id='article-fallback'><div class='breadcrumb'><a href='/'>Beranda</a> &#8250; Artikel</div><h1><data:view.title/></h1><div class='article-author' id='fallback-author'>Saeparan</div><div class='article-meta'><span id='fallback-date'> </span> &#183; <span data-reading='true'>Memuat artikel...</span></div><div aria-label='Bagikan artikel' class='share-bar'><a aria-label='Bagikan ke WhatsApp' class='sae-share-link' data-share='whatsapp' data-whatsapp='true' href='https://wa.me/' rel='noopener noreferrer' target='_blank'><svg aria-hidden='true' class='sae-social-icon' focusable='false' viewBox='0 0 205 205'><use href='#sae-social-whatsapp'/></svg></a><a aria-label='Bagikan ke Facebook' class='sae-share-link' data-facebook='true' data-share='facebook' href='https://www.facebook.com/' rel='noopener noreferrer' target='_blank'><svg aria-hidden='true' class='sae-social-icon' focusable='false' viewBox='0 0 205 205'><use href='#sae-social-facebook'/></svg></a><a aria-label='Bagikan ke X' class='sae-share-link' data-share='x' data-x='true' href='https://twitter.com/intent/tweet' rel='noopener noreferrer' target='_blank'><svg aria-hidden='true' class='sae-social-icon' focusable='false' viewBox='0 0 205 205'><use href='#sae-social-x'/></svg></a><a aria-label='Bagikan ke Telegram' class='sae-share-link' data-share='telegram' data-telegram='true' href='https://t.me/share/url' rel='noopener noreferrer' target='_blank'><svg aria-hidden='true' class='sae-social-icon' focusable='false' viewBox='0 0 205 205'><use href='#sae-social-telegram'/></svg></a><button aria-label='Salin tautan artikel' class='sae-copy' data-copy='true' type='button'><svg aria-hidden='true' viewBox='0 0 24 24'><rect height='13' rx='2' width='12' x='8' y='8'/><path d='M16 8V3H3v13h5'/></svg><span>Salin link</span></button></div><div aria-live='polite' class='share-status'> </div><div class='post-body' data-loading='true' id='fallback-body'><p>Memuat artikel...</p></div><div class='article-tags' id='fallback-tags'> </div></article></b:if>
+<div class='native-posts'>
+<b:section class='main' id='main' name='Posting Blog' showaddelement='yes'>
+  <b:widget id='Blog1' locked='false' title='Postingan Blog' type='Blog' version='2' visible='true'>
+    <b:includable id='main' var='top'>
+
+<b:loop values='data:posts' var='post'>
+<b:if cond='data:view.isSingleItem'>
+<article class='article' itemscope='itemscope' itemtype='https://schema.org/Article'>
+<div class='breadcrumb'><a href='/'>Beranda</a> &#8250; <b:if cond='data:post.labels'><a expr:href='data:post.labels.first.url'><data:post.labels.first.name/></a><b:else/>Artikel</b:if></div>
+<h1 itemprop='headline'><data:post.title/></h1>
+<div class='article-author' itemprop='author'><data:post.author.name/></div>
+<div class='article-meta'><span><data:post.date/></span> &#183; <span data-reading='true'>waktu baca 2 menit</span></div>
+<div aria-label='Bagikan artikel' class='share-bar'><a aria-label='Bagikan ke WhatsApp' class='sae-share-link' data-share='whatsapp' data-whatsapp='true' href='https://wa.me/' rel='noopener noreferrer' target='_blank'><svg aria-hidden='true' class='sae-social-icon' focusable='false' viewBox='0 0 205 205'><use href='#sae-social-whatsapp'/></svg></a><a aria-label='Bagikan ke Facebook' class='sae-share-link' data-facebook='true' data-share='facebook' href='https://www.facebook.com/' rel='noopener noreferrer' target='_blank'><svg aria-hidden='true' class='sae-social-icon' focusable='false' viewBox='0 0 205 205'><use href='#sae-social-facebook'/></svg></a><a aria-label='Bagikan ke X' class='sae-share-link' data-share='x' data-x='true' href='https://twitter.com/intent/tweet' rel='noopener noreferrer' target='_blank'><svg aria-hidden='true' class='sae-social-icon' focusable='false' viewBox='0 0 205 205'><use href='#sae-social-x'/></svg></a><a aria-label='Bagikan ke Telegram' class='sae-share-link' data-share='telegram' data-telegram='true' href='https://t.me/share/url' rel='noopener noreferrer' target='_blank'><svg aria-hidden='true' class='sae-social-icon' focusable='false' viewBox='0 0 205 205'><use href='#sae-social-telegram'/></svg></a><button aria-label='Salin tautan artikel' class='sae-copy' data-copy='true' type='button'><svg aria-hidden='true' viewBox='0 0 24 24'><rect height='13' rx='2' width='12' x='8' y='8'/><path d='M16 8V3H3v13h5'/></svg><span>Salin link</span></button></div><div aria-live='polite' class='share-status'> </div>
+<div class='post-body' id='post-body' itemprop='articleBody'><data:post.body/></div>
+<div class='article-tags'><b:loop values='data:post.labels' var='label'><a expr:href='data:label.url'><data:label.name/></a></b:loop></div>
+<b:if cond='data:post.allowComments'><section class='comments' id='comments'><h2>Komentar (<data:post.numComments/>)</h2><b:loop values='data:post.comments' var='comment'><div class='comment'><strong><data:comment.author/></strong><div class='time'><data:comment.timestamp/></div><div class='comment-body'><data:comment.body/></div></div></b:loop><a class='load-more' expr:href='data:post.commentsUrl'>Tulis komentar di Blogger</a></section></b:if>
+</article>
+<b:else/>
+<article class='native-card'><b:if cond='data:post.featuredImage'><a expr:href='data:post.url'><img expr:alt='data:post.title' expr:src='data:post.featuredImage' loading='lazy'/></a></b:if><a expr:href='data:post.url'><h2><data:post.title/></h2></a><div class='byline'><data:post.author.name/></div><span class='time'><data:post.date/></span><p><data:post.snippets.short/></p></article>
+</b:if></b:loop>
+<b:if cond='data:view.isMultipleItems'><nav aria-label='Halaman posting' class='pager'><b:if cond='data:newerPageUrl'><a expr:href='data:newerPageUrl'>&#8592; Lebih baru</a></b:if><b:if cond='data:olderPageUrl'><a expr:href='data:olderPageUrl'>Lebih lama &#8594;</a></b:if></nav></b:if>
+</b:includable>
+    <b:includable id='aboutPostAuthor'>
+  <div class='author-name'>
+    <a class='g-profile' expr:href='data:post.author.profileUrl' rel='author' title='author profile'>
+      <span>
+        <data:post.author.name/>
+      </span>
+    </a>
+  </div>
+  <div>
+    <span class='author-desc'>
+      <data:post.author.aboutMe/>
+    </span>
+  </div>
+</b:includable>
+    <b:includable id='addComments'>
+  <a expr:href='data:post.commentsUrl' expr:onclick='data:post.commentsUrlOnclick'>
+    <b:message name='messages.postAComment'/>
+  </a>
+</b:includable>
+    <b:includable id='commentAuthorAvatar'>
+  <div class='avatar-image-container'>
+    <img class='author-avatar' expr:src='data:comment.authorAvatarSrc' height='35' width='35'/>
+  </div>
+</b:includable>
+    <b:includable id='commentDeleteIcon' var='comment'>
+  <span expr:class='&quot;item-control &quot; + data:comment.adminClass'>
+    <b:if cond='data:showCmtPopup'>
+      <div class='goog-toggle-button'>
+        <div class='goog-inline-block comment-action-icon'></div>
+      </div>
+    <b:else/>
+      <a class='comment-delete' expr:href='data:comment.deleteUrl' expr:title='data:messages.deleteComment'>
+        <img src='https://resources.blogblog.com/img/icon_delete13.gif'/>
+      </a>
+    </b:if>
+  </span>
+</b:includable>
+    <b:includable id='commentForm' var='post'>
+  <div class='comment-form'>
+    <a name='comment-form'></a>
+    <h4 id='comment-post-message'><data:messages.postAComment/></h4>
+    <b:if cond='data:this.messages.blogComment != &quot;&quot;'>
+      <p><data:this.messages.blogComment/></p>
+    </b:if>
+    <b:include data='post' name='commentFormIframeSrc'/>
+    <iframe allowtransparency='allowtransparency' class='blogger-iframe-colorize blogger-comment-from-post' expr:height='data:cmtIframeInitialHeight ?: &quot;90px&quot;' frameborder='0' id='comment-editor' name='comment-editor' src='' width='100%'></iframe>
+    <data:post.cmtfpIframe/>
+    <script type='text/javascript'>
+      BLOG_CMT_createIframe(&#39;<data:post.appRpcRelayPath/>&#39;);
+    </script>
+  </div>
+</b:includable>
+    <b:includable id='commentFormIframeSrc' var='post'>
+  <a expr:href='data:post.commentFormIframeSrc' id='comment-editor-src'></a>
+</b:includable>
+    <b:includable id='commentItem' var='comment'>
+  <div class='comment' expr:id='&quot;c&quot; + data:comment.id'>
+    <b:include cond='data:blog.enabledCommentProfileImages' name='commentAuthorAvatar'/>
+
+    <div class='comment-block'>
+      <div class='comment-author'>
+        <b:if cond='data:comment.authorUrl'>
+          <b:message name='messages.authorSaidWithLink'>
+            <b:param expr:value='data:comment.author' name='authorName'/>
+            <b:param expr:value='data:comment.authorUrl' name='authorUrl'/>
+          </b:message>
+        <b:else/>
+          <b:message name='messages.authorSaid'>
+            <b:param expr:value='data:comment.author' name='authorName'/>
+          </b:message>
+        </b:if>
+      </div>
+      <div expr:class='&quot;comment-body&quot; + (data:comment.isDeleted ? &quot; deleted&quot; : &quot;&quot;)'>
+        <data:comment.body/>
+      </div>
+      <div class='comment-footer'>
+        <span class='comment-timestamp'>
+          <a expr:href='data:comment.url' title='comment permalink'>
+            <data:comment.timestamp/>
+          </a>
+          <b:include data='comment' name='commentDeleteIcon'/>
+        </span>
+      </div>
+    </div>
+  </div>
+</b:includable>
+    <b:includable id='commentList' var='comments'>
+  <div id='comments-block'>
+    <b:loop values='data:comments' var='comment'>
+      <b:include data='comment' name='commentItem'/>
+    </b:loop>
+  </div>
+</b:includable>
+    <b:includable id='commentPicker' var='post'>
+  <b:if cond='data:post.showThreadedComments'>
+    <b:include data='post' name='threadedComments'/>
+  <b:else/>
+    <b:include data='post' name='comments'/>
+  </b:if>
+</b:includable>
+    <b:includable id='comments' var='post'>
+  <section expr:class='&quot;comments&quot; + (data:post.embedCommentForm ? &quot; embed&quot; : &quot;&quot;)' expr:data-num-comments='data:post.numberOfComments' id='comments'>
+    <a name='comments'></a>
+    <b:if cond='data:post.allowComments'>
+
+      <b:include name='commentsTitle'/>
+
+      <div expr:id='data:widget.instanceId + &quot;_comments-block-wrapper&quot;'>
+        <b:include cond='data:post.comments' data='post.comments' name='commentList'/>
+      </div>
+
+      <b:if cond='data:post.commentPagingRequired'>
+        <div class='paging-control-container'>
+          <b:if cond='data:post.hasOlderLinks'>
+            <a expr:class='data:post.oldLinkClass' expr:href='data:post.oldestLinkUrl'>
+              <data:messages.oldest/>
+            </a>
+            <a expr:class='data:post.oldLinkClass' expr:href='data:post.olderLinkUrl'>
+              <data:messages.older/>
+            </a>
+          </b:if>
+
+          <span class='comment-range-text'>
+            <data:post.commentRangeText/>
+          </span>
+
+          <b:if cond='data:post.hasNewerLinks'>
+            <a expr:class='data:post.newLinkClass' expr:href='data:post.newerLinkUrl'>
+              <data:messages.newer/>
+            </a>
+            <a expr:class='data:post.newLinkClass' expr:href='data:post.newestLinkUrl'>
+              <data:messages.newest/>
+            </a>
+          </b:if>
+        </div>
+      </b:if>
+
+      <div class='footer'>
+        <b:if cond='data:post.embedCommentForm'>
+          <b:if cond='data:post.allowNewComments'>
+            <b:include data='post' name='commentForm'/>
+          <b:else/>
+            <data:post.noNewCommentsText/>
+          </b:if>
+        <b:else/>
+          <b:if cond='data:post.allowComments'>
+            <b:include data='post' name='addComments'/>
+          </b:if>
+        </b:if>
+      </div>
+    </b:if>
+    <b:if cond='data:showCmtPopup'>
+      <div id='comment-popup'>
+        <iframe allowtransparency='allowtransparency' frameborder='0' id='comment-actions' name='comment-actions' scrolling='no'>
+        </iframe>
+      </div>
+    </b:if>
+  </section>
+</b:includable>
+    <b:includable id='commentsTitle'>
+  <h3 class='title'><data:messages.comments/></h3>
+</b:includable>
+    <b:includable id='feedLinks'>
+  <b:if cond='!data:view.isPost'> <!-- Blog feed links -->
+    <b:if cond='data:feedLinks'>
+      <div class='blog-feeds'>
+        <b:include data='feedLinks' name='feedLinksBody'/>
+      </div>
+    </b:if>
+  <b:else/> <!--Post feed links -->
+    <div class='post-feeds'>
+      <b:loop values='data:posts' var='post'>
+        <b:if cond='data:post.allowComments and data:post.feedLinks'>
+          <b:include data='post.feedLinks' name='feedLinksBody'/>
+        </b:if>
+      </b:loop>
+    </div>
+  </b:if>
+</b:includable>
+    <b:includable id='feedLinksBody' var='links'>
+  <div class='feed-links'>
+  <data:messages.subscribeTo/>
+  <b:loop values='data:links' var='f'>
+     <a class='feed-link' expr:href='data:f.url' expr:type='data:f.mimeType' target='_blank'><data:f.name/> (<data:f.feedType/>)</a>
+  </b:loop>
+  </div>
+</b:includable>
+    <b:includable id='homePageLink'>
+  <a class='home-link' expr:href='data:blog.homepageUrl'>
+    <data:messages.home/>
+  </a>
+</b:includable>
+    <b:includable id='iframeComments' var='post'>
+  <!-- G+ comments, no longer available. The includable is retained for backwards-compatibility. -->
+</b:includable>
+    <b:includable id='inlineAd'><!-- Free edition: ads require Premium. --></b:includable>
+    <b:includable id='nextPageLink'>
+  <a class='blog-pager-older-link' expr:href='data:olderPageUrl' expr:id='data:widget.instanceId + &quot;_blog-pager-older-link&quot;' expr:title='data:messages.olderPosts'>
+    <data:messages.olderPosts/>
+  </a>
+</b:includable>
+    <b:includable id='post' var='post'>
+  <div class='post'>
+    <b:include data='post' name='postMeta'/>
+    <b:include data='post' name='postTitle'/>
+    <b:include name='headerByline'/>
+    <b:if cond='data:view.isSingleItem'>
+      <b:include data='post' name='postBody'/>
+    <b:else/>
+      <b:include data='post' name='postBodySnippet'/>
+      <b:include data='post' name='postJumpLink'/>
+    </b:if>
+    <b:include data='post' name='postFooter'/>
+  </div>
+</b:includable>
+    <b:includable id='postBody' var='post'>
+  <!-- If metaDescription is empty, use the post body as the schema.org description too, for G+/FB snippeting. -->
+  <div class='post-body entry-content float-container' expr:id='&quot;post-body-&quot; + data:post.id'>
+    <data:post.body/>
+  </div>
+</b:includable>
+    <b:includable id='postBodySnippet' var='post'>
+  <b:include data='post' name='postBody'/>
+</b:includable>
+    <b:includable id='postCommentsAndAd' var='post'>
+  <article class='post-outer-container'>
+    <!-- Post title and body -->
+    <div class='post-outer'>
+      <b:include data='post' name='post'/>
+    </div>
+
+    <!-- Comments -->
+    <b:include cond='data:view.isSingleItem' data='post' name='commentPicker'/>
+
+    <!-- Show ad inside post container, after comments, if single item. -->
+    <b:include cond='data:view.isSingleItem and data:post.includeAd' data='post' name='inlineAd'/>
+  </article>
+
+  <!-- Show ad outside post container (between posts) for feed pages. -->
+  <b:include cond='data:view.isMultipleItems and data:post.includeAd' data='post' name='inlineAd'/>
+</b:includable>
+    <b:includable id='postCommentsLink'>
+  <b:if cond='data:view.isMultipleItems'>
+    <span class='byline post-comment-link container'>
+      <b:include cond='data:post.commentSource != 1' name='commentsLink'/>
+    </span>
+  </b:if>
+</b:includable>
+    <b:includable id='postFooter' var='post'>
+  <div class='post-footer'>
+    <b:include name='footerBylines'/>
+    <b:include data='post' name='postFooterAuthorProfile'/>
+  </div>
+</b:includable>
+    <b:includable id='postFooterAuthorProfile' var='post'>
+  <b:if cond='data:post.author.aboutMe and data:view.isPost'>
+    <div class='author-profile'>
+      <b:if cond='data:post.author.authorPhoto.url'>
+        <img class='author-image' expr:src='data:post.author.authorPhoto.url' width='50px'/>
+        <div class='author-about'>
+          <b:include data='post' name='aboutPostAuthor'/>
+        </div>
+      <b:else/>
+        <b:include data='post' name='aboutPostAuthor'/>
+      </b:if>
+    </div>
+  </b:if>
+</b:includable>
+    <b:includable id='postHeader' var='post'>
+  <b:include name='headerByline'/>
+</b:includable>
+    <b:includable id='postMeta' var='post'>
+  <b:include data='post' name='postMetadataJSON'/>
+</b:includable>
+    <b:includable id='postPagination'>
+  <div class='blog-pager container' id='blog-pager'>
+    <b:include cond='data:newerPageUrl' name='previousPageLink'/>
+    <b:include cond='data:olderPageUrl' name='nextPageLink'/>
+    <b:include cond='data:view.url != data:blog.homepageUrl' name='homePageLink'/>
+  </div>
+</b:includable>
+    <b:includable id='postTitle' var='post'>
+  <a expr:name='data:post.id'></a>
+  <b:if cond='data:post.title != &quot;&quot;'>
+    <h3 class='post-title entry-title'>
+      <b:if cond='data:post.link or (data:post.url and data:view.url != data:post.url)'>
+        <a expr:href='data:post.link ?: data:post.url'><data:post.title/></a>
+      <b:else/>
+        <data:post.title/>
+      </b:if>
+    </h3>
+  </b:if>
+</b:includable>
+    <b:includable id='previousPageLink'>
+  <a class='blog-pager-newer-link' expr:href='data:newerPageUrl' expr:id='data:widget.instanceId + &quot;_blog-pager-newer-link&quot;' expr:title='data:messages.newerPosts'>
+    <data:messages.newerPosts/>
+  </a>
+</b:includable>
+    <b:includable id='threadedCommentForm' var='post'>
+  <div class='comment-form'>
+    <a name='comment-form'></a>
+    <h4 id='comment-post-message'><data:messages.postAComment/></h4>
+    <b:if cond='data:this.messages.blogComment != &quot;&quot;'>
+      <p><data:this.messages.blogComment/></p>
+    </b:if>
+    <b:include data='post' name='commentFormIframeSrc'/>
+    <iframe allowtransparency='allowtransparency' class='blogger-iframe-colorize blogger-comment-from-post' expr:height='data:cmtIframeInitialHeight ?: &quot;90px&quot;' frameborder='0' id='comment-editor' name='comment-editor' src='' width='100%'></iframe>
+    <data:post.cmtfpIframe/>
+    <script type='text/javascript'>
+      BLOG_CMT_createIframe(&#39;<data:post.appRpcRelayPath/>&#39;);
+    </script>
+  </div>
+</b:includable>
+    <b:includable id='threadedCommentJs' var='post'>
+  <script async='async' expr:src='data:post.commentSrc' type='text/javascript'></script>
+  <b:template-script inline='true' name='threaded_comments'/>
+  <script type='text/javascript'>
+    blogger.widgets.blog.initThreadedComments(
+        <data:post.commentJso/>,
+        <data:post.commentMsgs/>,
+        <data:post.commentConfig/>);
+  </script>
+</b:includable>
+    <b:includable id='threadedComments' var='post'>
+  <section class='comments threaded' expr:data-embed='data:post.embedCommentForm' expr:data-num-comments='data:post.numberOfComments' id='comments'>
+    <a name='comments'></a>
+
+    <b:include name='commentsTitle'/>
+
+    <div class='comments-content'>
+      <b:if cond='data:post.embedCommentForm'>
+        <b:include data='post' name='threadedCommentJs'/>
+      </b:if>
+      <div id='comment-holder'>
+         <data:post.commentHtml/>
+      </div>
+    </div>
+
+    <p class='comment-footer'>
+      <b:if cond='data:post.allowNewComments'>
+        <b:include data='post' name='threadedCommentForm'/>
+      <b:else/>
+        <data:post.noNewCommentsText/>
+      </b:if>
+      <b:if cond='data:post.showManageComments'>
+        <b:include data='post' name='manageComments'/>
+      </b:if>
+    </p>
+
+    <b:if cond='data:showCmtPopup'>
+      <div id='comment-popup'>
+        <iframe allowtransparency='allowtransparency' frameborder='0' id='comment-actions' name='comment-actions' scrolling='no'>
+        </iframe>
+      </div>
+    </b:if>
+  </section>
+</b:includable>
+    <b:includable id='tooltipCss'>
+  <!-- LINT.IfChange -->
+  <style>
+    .post-body a.b-tooltip-container {
+      position: relative;
+      display: inline-block;
+    }
+
+    .post-body a.b-tooltip-container .b-tooltip {
+      display: block !important;
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translate(-20%, 1px);
+      visibility: hidden;
+      opacity: 0;
+      z-index: 1;
+      transition: opacity 0.2s ease-in-out;
+    }
+
+    .post-body a.b-tooltip-container .b-tooltip iframe {
+      width: 200px;
+      height: 198px;
+      max-width: none;
+      border: none;
+      border-radius: 20px;
+      box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.2);
+    }
+
+    @media (hover: hover) {
+      .post-body a.b-tooltip-container:hover .b-tooltip {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+  </style>
+  <!-- LINT.ThenChange(//depot/google3/java/com/google/blogger/b2/layouts/widgets/v2-style.css) -->
+</b:includable>
+  </b:widget>
+</b:section></div>
+<div class='sm-adhold' id='sm-adhold'><b:section class='sae-section sm-ad' id='AdArticleParallax' name='Iklan Parallax Artikel (300x600)' showaddelement='no'>
+  <b:widget id='HTML901' locked='true' title='Iklan Parallax Artikel (300x600)' type='HTML' version='2' visible='true'>
+    <b:includable id='main'><div hidden='hidden' class='tb-free-lock-note' data-tb-free-locked='ads'>Iklan tersedia pada versi Premium.</div></b:includable>
+  </b:widget>
+</b:section></div>
+<div hidden='hidden' id='article-ad-holder'><div class='ad-slot' data-ad-slot='true'><b:section class='sae-section' id='AdArticle' name='Iklan Dalam Artikel 300x250' showaddelement='yes'>
+  <b:widget id='HTML25' locked='true' title='Iklan Dalam Artikel 300x250' type='HTML' version='2' visible='true'>
+    <b:includable id='main'><div hidden='hidden' class='tb-free-lock-note' data-tb-free-locked='ads'>Iklan tersedia pada versi Premium.</div></b:includable>
+  </b:widget>
+</b:section><div class='ad-placeholder'><span>ADVERTISEMENT</span><b>300 x 250</b><span>SLOT IKLAN SAEPARAN</span></div></div></div>
+<div class='home-only'><div class='feed-block panel' data-def='recent/feed/10' data-title='Berita Terkini'><b:section class='sae-section' id='Latest' name='Berita Terkini' showaddelement='yes'>
+  <b:widget id='HTML15' locked='false' title='Berita Terkini' type='HTML' version='2' visible='true'>
+    <b:includable id='main'><div class='config-data'><data:content/></div><span class='block-title' hidden='hidden'><data:title/></span><b:include name='quickedit'/></b:includable>
+  </b:widget>
+</b:section><div aria-live='polite' class='block-output'> </div></div><div class='feed-block panel' data-def='News/grid/6' data-title='Kabar Indonesia | News'><b:section class='sae-section' id='NewsGrid' name='Kabar Indonesia | News' showaddelement='yes'>
+  <b:widget id='HTML16' locked='false' title='Kabar Indonesia | News' type='HTML' version='2' visible='true'>
+    <b:includable id='main'><div class='config-data'><data:content/></div><span class='block-title' hidden='hidden'><data:title/></span><b:include name='quickedit'/></b:includable>
+  </b:widget>
+</b:section><div aria-live='polite' class='block-output'> </div></div><div class='feed-block panel' data-def='Bisnis/grid/6' data-title='Ekonomi &amp; Finansial | Bisnis'><b:section class='sae-section' id='BusinessGrid' name='Ekonomi &amp; Finansial | Bisnis' showaddelement='yes'>
+  <b:widget id='HTML17' locked='false' title='Ekonomi &amp;amp; Finansial | Bisnis' type='HTML' version='2' visible='true'>
+    <b:includable id='main'><div class='config-data'><data:content/></div><span class='block-title' hidden='hidden'><data:title/></span><b:include name='quickedit'/></b:includable>
+  </b:widget>
+</b:section><div aria-live='polite' class='block-output'> </div></div><div class='feed-block panel' data-def='Entertainment/grid/6' data-title='Entertainment'><b:section class='sae-section' id='EntertainmentGrid' name='Entertainment' showaddelement='yes'>
+  <b:widget id='HTML18' locked='false' title='Entertainment' type='HTML' version='2' visible='true'>
+    <b:includable id='main'><div class='config-data'><data:content/></div><span class='block-title' hidden='hidden'><data:title/></span><b:include name='quickedit'/></b:includable>
+  </b:widget>
+</b:section><div aria-live='polite' class='block-output'> </div></div></div>
+<div expr:class='data:view.isPost ? &quot;related-posts show&quot; : &quot;related-posts&quot;'><div class='feed-block panel' data-def='recent/grid/6' data-title='Baca Juga'><b:section class='sae-section' id='Related' name='Baca Juga' showaddelement='yes'>
+  <b:widget id='HTML24' locked='false' title='Baca Juga' type='HTML' version='2' visible='true'>
+    <b:includable id='main'><div class='config-data'><data:content/></div><span class='block-title' hidden='hidden'><data:title/></span><b:include name='quickedit'/></b:includable>
+  </b:widget>
+</b:section><div aria-live='polite' class='block-output'> </div></div></div>
+</div><aside>
+<div class='ad-slot' data-ad-slot='true'><b:section class='sae-section' id='AdSidebar' name='Iklan Sidebar 300x250' showaddelement='yes'>
+  <b:widget id='HTML19' locked='true' title='Iklan Sidebar 300x250' type='HTML' version='2' visible='true'>
+    <b:includable id='main'><div hidden='hidden' class='tb-free-lock-note' data-tb-free-locked='ads'>Iklan tersedia pada versi Premium.</div></b:includable>
+  </b:widget>
+</b:section><div class='ad-placeholder'><span>ADVERTISEMENT</span><b>300 x 250</b><span>SLOT IKLAN SAEPARAN</span></div></div><div class='feed-block panel' data-def='Pilihan/list/5' data-title='Pilihan Redaksi'><b:section class='sae-section' id='EditorsChoice' name='Pilihan Redaksi' showaddelement='yes'>
+  <b:widget id='HTML20' locked='false' title='Pilihan Redaksi' type='HTML' version='2' visible='true'>
+    <b:includable id='main'><div class='config-data'><data:content/></div><span class='block-title' hidden='hidden'><data:title/></span><b:include name='quickedit'/></b:includable>
+  </b:widget>
+</b:section><div aria-live='polite' class='block-output'> </div></div><div class='ad-slot' data-ad-slot='true'><b:section class='sae-section' id='AdSidebarTall' name='Iklan Sidebar 300x600' showaddelement='yes'>
+  <b:widget id='HTML21' locked='true' title='Iklan Sidebar 300x600' type='HTML' version='2' visible='true'>
+    <b:includable id='main'><div hidden='hidden' class='tb-free-lock-note' data-tb-free-locked='ads'>Iklan tersedia pada versi Premium.</div></b:includable>
+  </b:widget>
+</b:section><div class='ad-placeholder'><span>ADVERTISEMENT</span><b>300 x 600</b><span>SLOT IKLAN SAEPARAN</span></div></div><div class='feed-block panel' data-def='Opini/list/4' data-title='Opini &amp; Cerita'><b:section class='sae-section' id='Opinion' name='Opini &amp; Cerita' showaddelement='yes'>
+  <b:widget id='HTML22' locked='false' title='Opini &amp;amp; Cerita' type='HTML' version='2' visible='true'>
+    <b:includable id='main'><div class='config-data'><data:content/></div><span class='block-title' hidden='hidden'><data:title/></span><b:include name='quickedit'/></b:includable>
+  </b:widget>
+</b:section><div aria-live='polite' class='block-output'> </div></div></aside></div>
+</main>
+<footer class='site-footer'><div class='wrap'><div class='footer-inner'><div class='footer-about'><a class='logo' href='/'><small>Cerita Hari Ini, Perspektif Baru</small><strong data-tb-logo-mirror='saeparan'><data:blog.title/></strong></a><p>Ruang untuk kabar terbaru, cerita bermakna, dan berbagai perspektif dari Indonesia.</p></div><div><h3>Jelajahi Saeparan</h3><div class='footer-links'><a href='/search/label/News'>News</a><a href='/search/label/Bisnis'>Bisnis</a><a href='/search/label/Entertainment'>Entertainment</a><a href='/search/label/Tekno'>Tekno</a><a href='/search/label/Otomotif'>Otomotif</a><a href='/search/label/Opini'>Opini</a><a href='/search/label/Video'>Video Story</a><a href='/search'>Semua Berita</a></div></div><div><h3>Tentang Kami</h3><div class='footer-links'><a href='/p/tentang.html'>Tentang Saeparan</a><a href='/p/redaksi.html'>Redaksi</a><a href='/p/kontak.html'>Hubungi Kami</a><a href='/p/pedoman-media-siber.html'>Pedoman Siber</a><a href='/p/kebijakan-privasi.html'>Kebijakan Privasi</a><a href='/p/disclaimer.html'>Disclaimer</a></div><p style='margin-top:16px'><a href='/feeds/posts/default'>Ikuti RSS Saeparan &#8594;</a></p></div></div><div class='copyright'><span>© 2026 Template Blogger SEO Friendly By <a href="https://www.temablogger.com/">Tema Blogger</a>. All rights reserved.</span></div></div></footer>
+<a aria-label='Kembali ke atas' class='back-top' href='#main-content'><svg aria-hidden='true' viewBox='0 0 24 24'><path d='m6 14 6-6 6 6'/></svg></a>
+<nav aria-label='Navigasi HP' class='mobile-bottom'><a href='/'><svg aria-hidden='true' viewBox='0 0 24 24'><path d='m3 10 9-7 9 7v11h-6v-8H9v8H3z'/></svg><span>Beranda</span></a><a href='/search/label/Trending'><svg aria-hidden='true' viewBox='0 0 24 24'><path d='M3 4h7l2 2 2-2h7v16h-7l-2 2-2-2H3zM12 6v16'/></svg><span>Trending</span></a><a href='/search/label/Video'><svg aria-hidden='true' viewBox='0 0 24 24'><path d='m4 15 11-11 5 5-11 11-6 1zM13 6l5 5'/></svg><span>Video Story</span></a><a href='/search'><svg aria-hidden='true' viewBox='0 0 24 24'><circle cx='10.5' cy='10.5' r='7.5'/><path d='m16 16 5 5'/></svg><span>Jelajahi</span></a></nav>
+<script type="text/javascript" id='tb-license-engine-saeparan' data-tb-license-engine='free-v1'>//<![CDATA[
+function _0x5b7a(){var _0x435419=['zg9JDw1LBNrfBgvTzw50','z3jPza','mZe2oxH2zK5byW','ywn0AxzL','zgf0ytPPBwfNzs9ZDMCREg1Sla','ywz0zxjLBMq','phaGy2XHC3m9iMvTChr5lxn0yxrLiJ5gzwvKihrPzgfRihrLCNnLzgLHlIbbCNrPA2vSihrLDgfWigrHCgf0igrPyMfJysbKAsbIyxDHAc48l3a+','zMLSDgvY','Aw5WDxq','zMXVB3i','tMv3CWPfBNrLCNrHAw5Tzw50cLrLA25VcKjPC25PCWPgB29KicyGvhjHDMvScK1VBqPpDg9TB3rPzGPcB2XHicyGu3bVCNrZcLDVBwfUcKjVBgfUAxrH','lMfYDgLJBgu','u2fSAw4GBgLUAW','p2fSDd1QC29U','BNvTzxjPyW','y2XHC3noyw1L','C2LNBMfS','l2zLzwrZl3bVC3rZl2rLzMf1BhqV','DgvZDa','C3bSAxq','pgj1DhrVBIb0ExbLpsjIDxr0B24IigrHDgeTCgfNzt0I','C25PChbLDa','pha+','Aw5bzefMDgvYua','ywjVCNq','twvTDwf0lI4U','pc9WpG','C20TywrWEa','z2v0qxr0CMLIDxrL','jMX0oW','zMfSBgjHy2STDgfNCW','pgrPDIbJBgfZCZ0IAgvYBY1JB3b5iJ48Adi+','i2jYyw5Klw5HBwu','C2HHCMu','lMHVBwuTB25SEq','lMzLzwqTyMXVy2S','pgeGy2XHC3m9iM5LD3mTCM93iIbOCMvMpsi','ywrK','y2XVC2vK','u0ffx0ngrW','mZuXmZaWnuzyuhbtqG','pc9ZBwfSBd48l2rPDJ48l2e+','pc9OmJ4','DxjS','ywrKrxzLBNrmAxn0zw5LCG','AxmTAg9Tzq','z2v0rwXLBwvUDej5swq','pc9KAxy+phnWyw4+','pgrPDIbJBgfZCZ0Iz3jPzc1JyxjKCYi+','phnWyw4Gy2XHC3m9iNbSyxKTBwfYAYiGyxjPys1OAwrKzw49iNrYDwuIpIyJoty1ndS8l3nWyw4+pc9KAxy+pgrPDIbJBgfZCZ0IBgL2zs1JB3b5iJ48C21HBgW+u0ffuefsqu4GsefsssbjtKK8l3nTywXSpJXOmJ4','yMvMB3jLzw5K','Cgf0Ag5HBwu','pgeGy2XHC3m9iMDYAwqTy2fYzciGAhjLzJ0I','ig1LBML0','pgrPDIbJBgfZCZ0I','w2rHDgeTC2HHCMvD','CgfYC2vgCM9Tu3rYAw5N','DhmTzg9TywLUlw1VzgfS','BM8TAxrLBxm','ywX0zxjUyxrL','C3vTBwfYEq','zxHLy0nVBw1HBMq','nty5ntKWmMLVsNDPtG','BwfW','BwLU','Aw1N','CMvZAxPL','C2fLlwLZlxbVC3q','Aw1Hz2u','phaGy2XHC3m9iMvTChr5lxn0yxrLiJ5czwX1BsbHzgeGyxj0AwTLBc4GvgvYyML0A2fUihbVC3rPBMCGCgvYDgfTysbbBMrHihvUDhvRig1LBMfTCgLSA2fUigjLCML0ys48l3a+','i3rVCgLJlwXPBMTZ','zMLUza','Aw5Zzxj0qwrQywnLBNrfBgvTzw50','i2fYDgLJBguTywqTAg9SzgvY','Dgv4Dc9ODg1S','i0jSB2CXic5WB3n0lwjVzhK','DMfSAwq','Aw5Uzxjive1m','C2nYB2XS','Ahr0CdO','zMfSBgjHy2STyxv0Ag9Y','D2fRDhuGyMfJysa','AgLKzgvU','B3bLBG','lNnLy3rPB24','l2zLzwrZl3bVC3rZl2rLzMf1Bhq/ywX0pwPZB24MBwf4lxjLC3vSDhm9mJq','DgfYz2v0','lMjSB2nRlw91Dhb1Da','zgvM','BgLUAW','lNnOyxjLlxn0yxr1CW','mJq0EKzKywPL','lMfKlxbSywnLAg9SzgvY','zgLZywjSzwq','zgfYAW','Aw5UzxjuzxH0','y29WEq','BgfIzwXZ','zM9YrwfJAa','lNnTlxb4','C2XPy2u','C20TywrOB2XK','w2rHDgeTy29WEv0','y2f0zwDVCNK','AgfUzgXLrxzLBNq','DhjPBq','yxv0Ag9Y','CMvS','i3nLy29UzgfYEs1SAw5RCW','BMfTzq','iIb3Awr0Ad0I','y2XVC2vZDa','B25MB2n1C291Da','z2v0qM91BMrPBMDdBgLLBNrszwn0','A2v5CW','y2XVC2u','C2fLugXHy2vqyxjHBgXHEa','CMvHzhLtDgf0zq','zNjVBq','Dgv4DgfYzwe','pgGYpG','re9nq29UDgvUDeXVywrLza','l2zLzwrZl3bVC3rZl2rLzMf1Bhq/ywX0pwPZB24MBwf4lxjLC3vSDhm9mtuWjNe9','lM1HAw4TBMf2','phaGy2XHC3m9iNnUAxbWzxqIpG','Dg9W','i2rYyxDLCI1SAw5RCW','CMvJzw50','CMvTB3zL','y29UDgvUDa','AhjLzG','B25MB2n1C2LU','D2LKDgG','mZa5nJy1n01ADgj5Dq','pgrPDIbJBgfZCZ0IyNLSAw5LiJ48C3bHBIbJBgfZCZ0IyxzHDgfYiIbHCMLHlwHPzgrLBJ0IDhj1zsi+CZWVC3bHBJ48C3bHBJ4','zMLYC3rfBgvTzw50q2HPBgq','qxj0AwnSzsbUB3qGzM91BMq','y2XHC3nmAxn0','sfrntdi','pc9OmJ48C3bHBIbJBgfZCZ0IBgL2zs1IywrNzsi+vKLeru8Gu1rpuLK8l3nWyw4+idXZCgfUpKj1A2eGyxj0AwTLBcbKyw4GDg9UDg9UihzPzgvVBNLHpc9ZCgfUpJWVzgL2pJWVyt4','qwrbCNrPy2XLugfYywXSyxG','s2fIyxiGsw5KB25LC2LHFe5LD3mkrwTVBM9TAsbiyxjPieLUAxXcAxnUAxmkvgvRBM9SB2DPifrLCMjHCNv8vgvRBM8kq2vYAxrHifbPBgLOyw58t3bPBMK','C3jJ','iJ5nDwf0ihvSyw5NigHHBgfTyw48l2e+lJWVCd4','pc9HpG','p2fSDd1QC29UjM1HEc1Yzxn1BhrZpti0jNn0yxj0lwLUzgv4pq','C29Tzq','zNvUy3rPB24','y2HPBgrYzw4','CxvLCNLtzwXLy3rVCG','y2XPy2S','zgf0yxnLDa','phaGy2XHC3m9iMvTChr5lxn0yxrLiJ5czxjPDgeGyMvSDw0GzgfWyxqGzgLTDwf0lIa8ysbOCMvMpsiVC2vHCMnOiJ5mAwHHDcbZzw11ysbHCNrPA2vSicyJodu5ndS8l2e+pc9WpG','Bg9HzgLUzW','iJ5mAwHHDcbSywLUBNLHicyJodu5ndS8l2e+pc9KAxy+','C2HVCNq','pc9OmJ48l2rPDJ48ysbOCMvMpsi','zML4zwq','zgL2','CMvWBgfJzq','jNf1B3q7','yxbWzw5Kq2HPBgq','DMLKzw8','igPHBq','DgL0Bgu','y3jLyxrLrwXLBwvUDa','pgrPDIbJBgfZCZ0IC2vJDgLVBI1OzwfKiJ48zgL2pG','CgfNzq','lNnLyxjJAc1MB3jT','lMnVBMzPzY1KyxrH','DgvYBq','DhmTzg9TywLUlwDHDgu','Bwf4','mI1KAwDPDa','pc9KAxy+pc9HpG','w2rHDgeTCgfNzv0','y2vPBa','B3bHy2L0Eq','l2rLzMf1Bhq','iJ48zgL2ignSyxnZpsjSAxzLlwLTywDLiJ4','zMfSC2u','zw50CNK','pgj1DhrVBIb0ExbLpsjIDxr0B24IignSyxnZpsjOzxjVlw5LEhqIigfYAweTBgfIzwW9iKHLywrSAw5LigjLCMLRDxrUEweIpIyJodi1mdS8l2j1DhrVBJ48zgL2ignSyxnZpsjZBgLKzxiTy29UDhjVBhmIpG','sfruuca','C2fLCgfYyw4TzgfYAW','mZqZnJG3mKjqEgLrza','lNnTlwfKChG','zxjYB3i','pgrPDIbJBgfZCZ0IDMLKzw8TC3rYAxaIpG','zgf0ys10yI1LzgL0Aw9U','zMvLza','pc9ZCgfUpG','lNnTlxb4lwLU','BgvMDa','C3r5Bgu','mtq1mdGYn2DTsLDYBG','pc9ZCgfUpJWVzgL2pJX0Aw1LignSyxnZpsj0Aw1LiIbKyxrLDgLTzt0I','zM9JDxm','lMHLywrLCI10B3aGpIaUBg9NBW','u0ffx1bsrvzjrvC','AwqTsuq','jNrLEhq9','Ahr0Chm6lY90D2L0DgvYlMnVBs9PBNrLBNqVDhDLzxq/DxjSpq','z2v0sxrLBq','CxvLCNLtzwXLy3rVCKfSBa','y2XPCgjVyxjK','iJ48zgL2ignSyxnZpsjZDg9YEs1YAw5NiJ4','mZq1mty2neTHB0n3sq','BgvUz3rO','DMfSDwu','iIbJBgfZCZ0I','pgLTzYbHBhq9iLnHzxbHCMfUiIbZCMm9iG','qMvYAxrH','pc90Aw1LpG','lNbVC3qTyM9KEq','pgeGy2XHC3m9iNzPzgvVlwnHCMqIigHYzwy9iG','sfrntdK','DgfNtMfTzq','su1h','Dgv4DenVBNrLBNq','yM9KEq','C2v0qxr0CMLIDxrL','ic5JB25MAwCTzgf0yq','zw5Oyw5JzwqTAg9Tzq','yNv0Dg9U','zgf0ys10CY1KB21HAw4','u2vTDweGyxj0AwTLBcbZDwrHAcbKAxrHBxbPBgTHBG','y2fSBa','AgvHzgXPBMu','AM9PBG','DgjKlwXPy2vUC2uTz2f0zq','pc9KAxy+','C2fLqwXPz25qyxjHBgXHEa','y29UDgfPBNm','jMD0oW','pgeGy2XHC3m9iNn0B3j5iIbOCMvMpsiVC2vHCMnOl2XHyMvSlW','lMzLzwqTyMXVy2SSifTKyxrHlwfKlxnSB3rD','Bg9UzW','lMjSB2nRlxrPDgXL','yxj0AwnSzs1MywXSyMfJAW','Dg9mB2nHBgveyxrLu3rYAw5N','zgf0zq','i3bYAw1HCNKTBgLUA3m','Cg9ZAxrPB24','B25JBgLJAW','Ahr0Chm6lY93D3CUzMfJzwjVB2SUy29Tl3nOyxjLCI9ZAgfYzxiUCgHWp3u9','i3n0B3j5lwXPBMTZ','BgLUA1TYzwW9iMfSDgvYBMf0zsjD','iJ48zgL2ignSyxnZpsjYB3CTy29WEsi+pgGZpG','jMfTCdS','l3nLyxjJAc9SywjLBc8','pgGZpG','C2v0sxrLBq','khbYzwzLCNmTCMvKDwnLzc1TB3rPB246ihjLzhvJzsK','lxaTAY1UBY1UDs8','pc9ZCgfUpJWVyt4','zMvLzc1SAxn0','tMv3CW'];_0x5b7a=function(){return _0x435419;};return _0x5b7a();}function _0xabb9(_0x4e3746,_0x2d1798){var _0x5b7a74=_0x5b7a();return _0xabb9=function(_0xabb9f6,_0x1ffea4){_0xabb9f6=_0xabb9f6-0x100;var _0x18c335=_0x5b7a74[_0xabb9f6];if(_0xabb9['laslhi']===undefined){var _0x1e69ea=function(_0x23e82b){var _0x177568='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789+/=';var _0x1e2dba='',_0x58c1cb='';for(var _0x3bc54e=0x0,_0x432e6d,_0x5abc8c,_0x1cabae=0x0;_0x5abc8c=_0x23e82b['charAt'](_0x1cabae++);~_0x5abc8c&&(_0x432e6d=_0x3bc54e%0x4?_0x432e6d*0x40+_0x5abc8c:_0x5abc8c,_0x3bc54e++%0x4)?_0x1e2dba+=String['fromCharCode'](0xff&_0x432e6d>>(-0x2*_0x3bc54e&0x6)):0x0){_0x5abc8c=_0x177568['indexOf'](_0x5abc8c);}for(var _0x482c69=0x0,_0x3d3b43=_0x1e2dba['length'];_0x482c69<_0x3d3b43;_0x482c69++){_0x58c1cb+='%'+('00'+_0x1e2dba['charCodeAt'](_0x482c69)['toString'](0x10))['slice'](-0x2);}return decodeURIComponent(_0x58c1cb);};_0xabb9['zXBjIz']=_0x1e69ea,_0x4e3746=arguments,_0xabb9['laslhi']=!![];}var _0x569edf=_0x5b7a74[0x0],_0x17d24a=_0xabb9f6+_0x569edf,_0x5556ae=_0x4e3746[_0x17d24a];return!_0x5556ae?(_0x18c335=_0xabb9['zXBjIz'](_0x18c335),_0x4e3746[_0x17d24a]=_0x18c335):_0x18c335=_0x5556ae,_0x18c335;},_0xabb9(_0x4e3746,_0x2d1798);}(function(_0x4f05fc,_0x17b47c){var _0x3309f3=_0xabb9,_0x39aff3=_0x4f05fc();while(!![]){try{var _0x37d07f=-parseInt(_0x3309f3(0x15b))/0x1*(parseInt(_0x3309f3(0x1b4))/0x2)+parseInt(_0x3309f3(0x1de))/0x3+-parseInt(_0x3309f3(0x110))/0x4+-parseInt(_0x3309f3(0x181))/0x5+parseInt(_0x3309f3(0x197))/0x6+parseInt(_0x3309f3(0x11a))/0x7+parseInt(_0x3309f3(0x126))/0x8;if(_0x37d07f===_0x17b47c)break;else _0x39aff3['push'](_0x39aff3['shift']());}catch(_0x43f10b){_0x39aff3['push'](_0x39aff3['shift']());}}}(_0x5b7a,0xa404a),function(_0x23e82b){'use strict';var _0x3ac5d0=_0xabb9;function _0x177568(){var _0x49ac12=_0xabb9,_0x1e2dba=document,_0x58c1cb=_0x1e2dba['documentElement'];_0x58c1cb[_0x49ac12(0x134)]('data-tb-domain-state',_0x49ac12(0x1a5)),_0x58c1cb['setAttribute'](_0x49ac12(0x138),'valid'),_0x58c1cb['setAttribute'](_0x49ac12(0x114),'free'),_0x58c1cb[_0x49ac12(0x1e2)][_0x49ac12(0x1d9)]('tbd-license-modal',_0x49ac12(0x192)),[_0x49ac12(0x13d),'tbd-license-shield','tbd-license-status',_0x49ac12(0x102),'ts-domain-shield','ts-domain-status'][_0x49ac12(0x1bb)](function(_0x3bc54e){var _0x297502=_0x49ac12,_0x432e6d=_0x1e2dba['getElementById'](_0x3bc54e);if(_0x432e6d)_0x432e6d[_0x297502(0x1ab)]=!![];}),_0x23e82b();}if(document[_0x3ac5d0(0x1ce)]===_0x3ac5d0(0x1f2))document[_0x3ac5d0(0x185)](_0x3ac5d0(0x1d2),_0x177568,{'once':!![]});else _0x177568();}(function(){var _0x39ffd9=_0xabb9;function _0x5abc8c(_0x1cabae){var _0x2023a0=_0xabb9;if(document['readyState']==='loading')document[_0x2023a0(0x185)](_0x2023a0(0x1d2),_0x1cabae,{'once':!![]});else{if(typeof _0x1cabae==='function')_0x1cabae[_0x2023a0(0x13a)](document);else _0x1cabae&&typeof _0x1cabae[_0x2023a0(0x1c1)]===_0x2023a0(0x1ec)&&_0x1cabae[_0x2023a0(0x1c1)]();}}window['saePlaceParallax']=function(_0x482c69){var _0x65522=_0xabb9,_0x3d3b43=document[_0x65522(0x187)](_0x65522(0x1be)),_0xb50871=document['getElementById'](_0x65522(0x1e5));if(!_0x3d3b43)return;if(!document['body']['classList'][_0x65522(0x140)](_0x65522(0x19c))){_0x3d3b43[_0x65522(0x1ab)]=!![];return;}if(!_0x482c69){_0x3d3b43[_0x65522(0x1ab)]=!![];return;}if(!_0xb50871){_0x3d3b43[_0x65522(0x1ab)]=!![];return;}if(_0xb50871['classList'][_0x65522(0x140)](_0x65522(0x193))){_0x3d3b43[_0x65522(0x1ab)]=!![];return;}if(_0x482c69['querySelector'](_0x65522(0x111)))return;var _0x57a128=Number((window[_0x65522(0x180)]||{})[_0x65522(0x170)])||0x2,_0x137bba=0x0,_0x6ad127=null;Array['prototype']['some'][_0x65522(0x13a)](_0x482c69[_0x65522(0x1ed)],function(_0x2812b9){var _0x1ae70e=_0x65522;if(/^(P|DIV|BLOCKQUOTE|UL|OL|H2|H3)$/[_0x1ae70e(0x16b)](_0x2812b9[_0x1ae70e(0x130)])){if(_0x2812b9['textContent']['trim']()[_0x1ae70e(0x127)]>0x28){_0x137bba++;if(_0x137bba===_0x57a128)return _0x6ad127=_0x2812b9,!![];}}return![];});var _0x165a82=document[_0x65522(0x1fe)](_0x65522(0x1f7));_0x165a82[_0x65522(0x168)]=_0x65522(0x174),_0x165a82[_0x65522(0x1a6)]='<div\x20class=\x22sm-px\x22><div\x20class=\x22sm-px-in\x22></div></div>',_0x165a82[_0x65522(0x1ee)](_0x65522(0x117))['appendChild'](_0xb50871);if(_0x6ad127)_0x6ad127['insertAdjacentElement'](_0x65522(0x15e),_0x165a82);else _0x482c69[_0x65522(0x1fa)](_0x165a82);_0x3d3b43['hidden']=!![];if(window['saeAlignParallax'])window[_0x65522(0x13f)]();},window['saePlaceParallax'](document['querySelector'](_0x39ffd9(0x1a4))),(function(){'use strict';var _0x1a5df9=_0x39ffd9;var _0xde05b9=document,_0x16377b=[],_0x3b1a3f={},_0x162a89=_0xde05b9[_0x1a5df9(0x133)][_0x1a5df9(0x1e2)][_0x1a5df9(0x140)](_0x1a5df9(0x186)),_0xcba6fe=matchMedia(_0x1a5df9(0x154))['matches'];_0xde05b9['querySelectorAll'](_0x1a5df9(0x143))[_0x1a5df9(0x1bb)](function(_0x5b6c5b){var _0x47f10e=_0x1a5df9,_0x4a44bc=_0x5b6c5b['querySelector'](_0x47f10e(0x1ad));if(_0x4a44bc){if(_0x4a44bc[_0x47f10e(0x1e2)]['contains']('no-items'))_0x5b6c5b[_0x47f10e(0x1ab)]=!![];}});var _0x6e90a={'Brand':[_0x1a5df9(0x11d)],'MainMenu':[_0x1a5df9(0x1d4)],'SubMenu':[_0x1a5df9(0x1c5)],'StoryMenu':[_0x1a5df9(0x14d)],'TopicMenu':[_0x1a5df9(0x19f)]};Object[_0x1a5df9(0x1cb)](_0x6e90a)[_0x1a5df9(0x1bb)](function(_0x2b676f){var _0x209366=_0x1a5df9,_0xf5b1c7=_0xde05b9[_0x209366(0x187)](_0x2b676f);if(_0xf5b1c7){if(_0xf5b1c7[_0x209366(0x1e2)][_0x209366(0x140)]('no-items'))_0x6e90a[_0x2b676f][_0x209366(0x1bb)](function(_0x722933){var _0x38c0d7=_0x209366,_0x584dfa=_0xde05b9['querySelector'](_0x722933);if(_0x584dfa)_0x584dfa[_0x38c0d7(0x1ab)]=!![];});}});var _0x43b6eb=_0x1a5df9(0x15d)+encodeURIComponent('<svg\x20xmlns=\x22http://www.w3.org/2000/svg\x22\x20width=\x22800\x22\x20height=\x22450\x22><defs><linearGradient\x20id=\x22g\x22><stop\x20stop-color=\x22#06475a\x22/><stop\x20offset=\x221\x22\x20stop-color=\x22#03aaa9\x22/></linearGradient></defs><path\x20fill=\x22url(#g)\x22\x20d=\x22M0\x200h800v450H0z\x22/><text\x20x=\x22400\x22\x20y=\x22240\x22\x20text-anchor=\x22middle\x22\x20fill=\x22white\x22\x20font-family=\x22Arial\x22\x20font-size=\x2252\x22>saeparan</text></svg>');function _0x45d028(_0x26648d){var _0x5f16b6=_0x1a5df9;return String(_0x26648d||'')[_0x5f16b6(0x1f8)](/[&<>"']/g,function(_0x22221e){var _0x356ca8=_0x5f16b6;return{'&':_0x356ca8(0x150),'<':_0x356ca8(0x176),'>':_0x356ca8(0x141),'\x22':_0x356ca8(0x1f9),'\x27':'&#39;'}[_0x22221e];});}function _0x2c70b2(_0x1cdcec){var _0x49647a=_0x1a5df9;if(window['SAE_PREVIEW']){if(location['protocol']==='file:'){if(/^(assets\/|\/artikel\.html)/['test'](_0x1cdcec))return _0x1cdcec['replace'](/^\//,'');}}try{var _0x4d3134=new URL(_0x1cdcec,location[_0x49647a(0x1db)]);if([_0x49647a(0x1a8),'https:']['indexOf'](_0x4d3134['protocol'])>=0x0)return _0x4d3134['href'];}catch(_0x83b064){}return'/';}function _0x5cd777(_0x44c6e4,_0x5be585,_0xd32564){var _0x5793f5=_0x1a5df9;if(!_0x44c6e4)return _0x43b6eb;var _0x1a9949=_0x2c70b2(_0x44c6e4);if(/blogger_img_proxy/[_0x5793f5(0x16b)](_0x1a9949))return _0x1a9949['replace'](/=w\d+.*$/,'')+'=w'+_0x5be585+'-h'+_0xd32564+'-p-k-no-nu';if(/\.(?:googleusercontent|blogspot)\.com\//['test'](_0x1a9949))return _0x1a9949['replace'](/\/(?:s\d+(?:-[^/]+)?|w\d+(?:-[^/]+)?)\//,'/w'+_0x5be585+'-h'+_0xd32564+_0x5793f5(0x155));return _0x1a9949;}function _0x5504b2(_0xfb7e21,_0x217c16){var _0x8b7eb6=_0x1a5df9,_0x3da46b=_0xde05b9[_0x8b7eb6(0x1ee)]('#'+_0xfb7e21+_0x8b7eb6(0x135));if(!_0x3da46b)return _0x217c16;var _0x446fc5=_0x3da46b[_0x8b7eb6(0x1b8)][_0x8b7eb6(0x1c2)]();return _0x446fc5||_0x217c16;}function _0x374983(_0xb63261,_0x58d08f){var _0x5bfdd6=_0x1a5df9,_0x5ee1a5=_0xde05b9[_0x5bfdd6(0x1ee)]('#'+_0xb63261+_0x5bfdd6(0x135));if(!_0x5ee1a5)return _0x58d08f['split']('\x0a');var _0x3d9be2=_0x5ee1a5['innerHTML'][_0x5bfdd6(0x1f8)](/<br\s*\/?\s*>/gi,'\x0a')['replace'](/<\/div>|<\/p>|<\/li>/gi,'\x0a'),_0xae2de3=_0xde05b9[_0x5bfdd6(0x1fe)]('div');return _0xae2de3[_0x5bfdd6(0x1a6)]=_0x3d9be2,_0x3d9be2=_0xae2de3['textContent'][_0x5bfdd6(0x1c2)](),(_0x3d9be2||_0x58d08f)[_0x5bfdd6(0x16c)]('\x0a')[_0x5bfdd6(0x198)](function(_0x3b87bb){return _0x3b87bb['trim']();})[_0x5bfdd6(0x160)](Boolean);}function _0x1c92f3(_0x5f64b0,_0x2efe8d,_0x5c3cdc){var _0xfccc9b=_0x1a5df9,_0x3913e6=_0xde05b9[_0xfccc9b(0x1ee)](_0x2efe8d);if(!_0x3913e6)return;_0x3913e6[_0xfccc9b(0x1a6)]=_0x374983(_0x5f64b0,_0x5c3cdc)['map'](function(_0x5b06ee){var _0x3301c1=_0xfccc9b,_0x4fd682=_0x5b06ee[_0x3301c1(0x16c)]('|');return'<a\x20href=\x22'+_0x45d028(_0x2c70b2(_0x4fd682[0x1]||_0x3301c1(0x151)+encodeURIComponent(_0x4fd682[0x0])))+'\x22>'+_0x45d028(_0x4fd682[0x0])+_0x3301c1(0x1e9);})[_0xfccc9b(0x13c)]('');}var _0x49f324=_0x1a5df9(0x163);_0x1c92f3(_0x1a5df9(0x1e3),_0x1a5df9(0x149),_0x49f324),_0x1c92f3('HTML2',_0x1a5df9(0x1d7),_0x49f324+'\x0aOpini\x0aTentang\x20Kami|/p/tentang.html'),_0x1c92f3('HTML3',_0x1a5df9(0x1c5),'Breaking\x20News\x0aNusantara\x20Pulih\x0aGreen\x20Initiative\x0aVideo\x20Story\x0aAudio\x20Story\x0aTrending\x0aSaeparan\x20Plus\x0aOpini\x20&\x20Cerita');var _0x2be414=_0xde05b9[_0x1a5df9(0x1ee)]('#HTML1\x20.config-data');if(_0x2be414){var _0x5c80d9=_0x2be414['querySelector']('img');if(_0x5c80d9)_0xde05b9[_0x1a5df9(0x1ee)](_0x1a5df9(0x179))[_0x1a5df9(0x1a6)]=_0x1a5df9(0x12a)+_0x45d028(_0x2c70b2(_0x5c80d9[_0x1a5df9(0x175)](_0x1a5df9(0x1e7))))+'\x22/>';else{if(_0x2be414[_0x1a5df9(0x132)][_0x1a5df9(0x1c2)]())_0xde05b9[_0x1a5df9(0x1ee)]('#brand-name')[_0x1a5df9(0x132)]=_0x2be414[_0x1a5df9(0x132)][_0x1a5df9(0x1c2)]();}}function _0x3fc0ae(){var _0x423a52=_0x1a5df9;_0xde05b9[_0x423a52(0x159)][_0x423a52(0x1e2)]['toggle'](_0x423a52(0x1b7));try{localStorage[_0x423a52(0x153)](_0x423a52(0x10f),_0xde05b9['documentElement'][_0x423a52(0x1e2)][_0x423a52(0x140)]('dark')?'1':'0');}catch(_0x162a52){}}try{if(localStorage[_0x1a5df9(0x122)]('saeparan-dark')==='1')_0xde05b9['documentElement'][_0x1a5df9(0x1e2)][_0x1a5df9(0x17e)](_0x1a5df9(0x1b7));}catch(_0x496a81){}_0xde05b9[_0x1a5df9(0x123)]('[data-theme]')['forEach'](function(_0x35692e){_0x35692e['addEventListener']('click',_0x3fc0ae);}),_0xde05b9[_0x1a5df9(0x123)]('[data-search]')[_0x1a5df9(0x1bb)](function(_0x44fd86){var _0x1683b6=_0x1a5df9;_0x44fd86[_0x1683b6(0x185)]('click',function(){var _0xeb510c=_0x1683b6,_0x2e61ef=_0xde05b9['querySelector'](_0xeb510c(0x201));_0x2e61ef[_0xeb510c(0x1e2)]['toggle'](_0xeb510c(0x1ac));if(_0x2e61ef[_0xeb510c(0x1e2)][_0xeb510c(0x140)]('open'))_0x2e61ef['querySelector'](_0xeb510c(0x161))[_0xeb510c(0x11c)]();});}),_0xde05b9[_0x1a5df9(0x123)](_0x1a5df9(0x19a))[_0x1a5df9(0x1bb)](function(_0x579b05){var _0x30cab4=_0x1a5df9;_0x579b05[_0x30cab4(0x185)]('error',function(){var _0x2daaff=_0x30cab4;if(_0x579b05['src']!==_0x43b6eb)_0x579b05[_0x2daaff(0x1e7)]=_0x43b6eb;});}),_0xde05b9[_0x1a5df9(0x185)](_0x1a5df9(0x112),function(_0x503468){var _0x579478=_0x1a5df9;if(_0x503468['target'][_0x579478(0x130)]===_0x579478(0x131)){if(_0x503468[_0x579478(0x1af)][_0x579478(0x1e7)]!==_0x43b6eb)_0x503468['target'][_0x579478(0x1e7)]=_0x43b6eb;}},!![]);function _0x4677fd(_0x11b837){var _0x3164ef=_0x1a5df9,_0x52c5a2='';(_0x11b837[_0x3164ef(0x1b2)]||[])[_0x3164ef(0x1bb)](function(_0x5ecc6c){var _0x1d986b=_0x3164ef;if(_0x5ecc6c[_0x1d986b(0x1c4)]===_0x1d986b(0x194))_0x52c5a2=_0x5ecc6c['href'];});var _0x23fab0=_0x11b837['content']?_0x11b837[_0x3164ef(0x1da)]['$t']:'',_0x44d102=new DOMParser()[_0x3164ef(0x191)](_0x23fab0,_0x3164ef(0x1a3)),_0x5e68b8=_0x44d102[_0x3164ef(0x1ee)]('img');return{'id':_0x11b837['id']['$t'],'title':_0x11b837[_0x3164ef(0x1fd)]['$t'],'url':_0x2c70b2(_0x52c5a2),'image':_0x11b837['media$thumbnail']?_0x11b837['media$thumbnail'][_0x3164ef(0x184)]:_0x5e68b8?_0x5e68b8[_0x3164ef(0x175)]('src'):'','author':_0x11b837[_0x3164ef(0x1c3)]?_0x11b837[_0x3164ef(0x1c3)][0x0][_0x3164ef(0x1c6)]['$t']:'Redaksi\x20Saeparan','label':_0x11b837[_0x3164ef(0x1c0)]?_0x11b837['category'][0x0][_0x3164ef(0x101)]:_0x3164ef(0x158),'labels':(_0x11b837[_0x3164ef(0x1c0)]||[])[_0x3164ef(0x198)](function(_0x1ebc40){var _0x230689=_0x3164ef;return _0x1ebc40[_0x230689(0x101)];}),'body':_0x23fab0,'date':_0x11b837['published']['$t'],'snippet':(_0x11b837[_0x3164ef(0x195)]?new DOMParser()['parseFromString'](_0x11b837['summary']['$t'],_0x3164ef(0x1a3))[_0x3164ef(0x133)]['textContent']:_0x44d102[_0x3164ef(0x133)][_0x3164ef(0x132)])['slice'](0x0,0xa0)};}function _0x1f230c(_0x3cbf5e,_0x5dc388){var _0xfaf362=_0x1a5df9;return'/feeds/posts/summary'+(_0x3cbf5e?'/-/'+encodeURIComponent(_0x3cbf5e):'')+_0xfaf362(0x1ea)+(_0x5dc388||0x1);}async function _0x388962(_0x11ff2a){var _0x3eea1f=_0x1a5df9,_0x5ab583=new AbortController(),_0x3819eb=setTimeout(function(){var _0x22efef=_0xabb9;_0x5ab583[_0x22efef(0x171)]();},0x2ee0);try{var _0x569afd=await fetch(_0x11ff2a,{'signal':_0x5ab583[_0x3eea1f(0x169)]});if(!_0x569afd['ok'])throw Error(_0x3eea1f(0x10e)+_0x569afd['status']);var _0x58141a=await _0x569afd['json']();return(_0x58141a['entry']?[_0x58141a[_0x3eea1f(0x10c)]]:_0x58141a[_0x3eea1f(0x115)]?_0x58141a[_0x3eea1f(0x115)][_0x3eea1f(0x10c)]||[]:[])[_0x3eea1f(0x198)](_0x4677fd);}finally{clearTimeout(_0x3819eb);}}async function _0x396da5(_0x1cfd5e,_0xa25af8){var _0x3a6383=_0x1a5df9,_0x2006c6=(_0x1cfd5e||_0x3a6383(0x1d8))+':'+(_0xa25af8||0x1);if(_0x3b1a3f[_0x2006c6])return _0x3b1a3f[_0x2006c6];_0x3b1a3f[_0x2006c6]=(async function(){var _0x153e36=_0x3a6383,_0x253daa=_0x1f230c(_0x1cfd5e,_0xa25af8),_0x29acb7=await _0x388962(_0x253daa);if(_0x29acb7[_0x153e36(0x1eb)](function(_0x5b564d){var _0x3af033=_0x153e36;return!_0x5b564d[_0x3af033(0x19d)];}))try{var _0x296564=await _0x388962(_0x253daa['replace']('/summary',_0x153e36(0x109))),_0x5a1143={};_0x296564['forEach'](function(_0x41b7e7){var _0x114e01=_0x153e36;_0x5a1143[_0x41b7e7['id']]=_0x41b7e7[_0x114e01(0x19d)];}),_0x29acb7['forEach'](function(_0x9b3871){var _0x4d0d5c=_0x153e36;if(!_0x9b3871[_0x4d0d5c(0x19d)])_0x9b3871['image']=_0x5a1143[_0x9b3871['id']]||'';});}catch(_0x5db995){}return _0x29acb7;}());try{return await _0x3b1a3f[_0x2006c6];}catch(_0x3cc928){delete _0x3b1a3f[_0x2006c6];throw _0x3cc928;}}function _0x1f8449(_0x2dd017){var _0x5ca88b=_0x1a5df9,_0x54813f=Date['now']()-new Date(_0x2dd017)['getTime']();if(_0x54813f<0xea60)return'Baru\x20saja';if(_0x54813f<0x36ee80)return Math[_0x5ca88b(0x162)](_0x54813f/0xea60)+_0x5ca88b(0x18e);if(_0x54813f<0x5265c00)return Math[_0x5ca88b(0x162)](_0x54813f/0x36ee80)+_0x5ca88b(0x1fc);return new Date(_0x2dd017)[_0x5ca88b(0x147)]('id-ID',{'day':_0x5ca88b(0x167),'month':_0x5ca88b(0x1f4),'year':'numeric'});}function _0x4bb75f(_0x160e4b){var _0x3187c4=_0x1a5df9;return _0x3187c4(0x1df)+_0x45d028(_0x160e4b['author'])+_0x3187c4(0x11b)+_0x45d028(_0x160e4b['date'])+'\x22>'+_0x45d028(_0x1f8449(_0x160e4b[_0x3187c4(0x148)]))+_0x3187c4(0x12c);}function _0x112a59(_0x3219d6,_0x39d83b,_0x3aa6b3,_0x16fdb8){var _0xd9bd66=_0x1a5df9;return'<img\x20'+(_0x16fdb8===![]?'fetchpriority=\x22high\x22':'loading=\x22lazy\x22')+'\x20src=\x22'+_0x45d028(_0x5cd777(_0x3219d6[_0xd9bd66(0x19d)],_0x39d83b,_0x3aa6b3))+'\x22\x20alt=\x22'+_0x45d028(_0x3219d6[_0xd9bd66(0x1fd)])+_0xd9bd66(0x1c7)+_0x39d83b+'\x22\x20height=\x22'+_0x3aa6b3+'\x22/>';}function _0x979503(_0xe61816,_0x58ea1d){var _0x5ef2d3=_0x1a5df9;return _0x5ef2d3(0x17d)+_0x45d028(_0xe61816['url'])+_0x5ef2d3(0x14f)+_0x45d028(_0xe61816[_0x5ef2d3(0x1fd)])+'</h3>'+_0x4bb75f(_0xe61816)+(_0x58ea1d?_0x5ef2d3(0x1d5)+_0x45d028(_0xe61816[_0x5ef2d3(0x16e)])+'</p>':'')+'</div>'+_0x112a59(_0xe61816,0x168,0xf0)+_0x5ef2d3(0x1e9);}function _0x2a787f(_0x1fb7cf,_0x19c17a){var _0x56b458=_0x1a5df9,_0x2b1481=_0x1fb7cf[_0x56b458(0x16c)]('|');return _0x56b458(0x1ff)+(_0x2b1481[_0x56b458(0x127)]>0x1?'<small>'+_0x45d028(_0x2b1481[0x0])+'</small>':'')+_0x56b458(0x1d1)+_0x45d028(_0x2b1481[_0x2b1481['length']-0x1])+_0x56b458(0x1f5)+_0x45d028('/search/label/'+encodeURIComponent(_0x19c17a||'Trending'))+_0x56b458(0x1f3);}function _0x45d5a0(_0x439ee0,_0x40a32b){var _0x56f60e=_0x1a5df9,_0x38a813=0x0,_0x5fbc2f=Math['ceil'](_0x439ee0['length']/0x3),_0x1d7875=![];function _0x1004a0(){var _0x4dad3b=_0xabb9,_0x4cefe3=_0x439ee0[_0x4dad3b(0x1bd)](_0x38a813*0x3,_0x38a813*0x3+0x3);_0x40a32b[_0x4dad3b(0x1a6)]='<div\x20class=\x22hero-grid\x22>'+_0x4cefe3[_0x4dad3b(0x198)](function(_0x32fba5,_0x5c88bc){var _0x5537f2=_0x4dad3b;return'<a\x20class=\x22hero-card\x22\x20href=\x22'+_0x45d028(_0x32fba5[_0x5537f2(0x184)])+'\x22>'+_0x112a59(_0x32fba5,0x384,0x21c,_0x5c88bc!==0x0)+_0x5537f2(0x178)+_0x45d028(_0x32fba5['title'])+_0x5537f2(0x183)+_0x4bb75f(_0x32fba5)+_0x5537f2(0x105);})['join']('')+'</div>'+(_0x5fbc2f>0x1?_0x4dad3b(0x10d)+Array[_0x4dad3b(0x1cf)]({'length':_0x5fbc2f},function(_0xb5d12d,_0x4cbb6d){var _0x58bb7d=_0x4dad3b;return _0x58bb7d(0x16d)+_0x4cbb6d+_0x58bb7d(0x129)+(_0x4cbb6d===_0x38a813?_0x58bb7d(0x15c):'')+'\x22\x20aria-label=\x22Headline\x20halaman\x20'+(_0x4cbb6d+0x1)+'\x22\x20aria-pressed=\x22'+(_0x4cbb6d===_0x38a813)+'\x22></button>';})[_0x4dad3b(0x13c)]('')+_0x4dad3b(0x13e):'');var _0xea6c64=_0x40a32b[_0x4dad3b(0x1ee)]('.hero-next');if(_0xea6c64)_0xea6c64[_0x4dad3b(0x14b)]=function(){_0x38a813=(_0x38a813+0x1)%_0x5fbc2f,_0x1004a0();};_0x40a32b[_0x4dad3b(0x123)](_0x4dad3b(0x106))[_0x4dad3b(0x1bb)](function(_0x11a70a){_0x11a70a['onclick']=function(){var _0xf03b22=_0xabb9;_0x38a813=Number(_0x11a70a[_0xf03b22(0x1f0)][_0xf03b22(0x200)]),_0x1004a0();};});}_0x1004a0(),_0x40a32b['onmouseenter']=function(){_0x1d7875=!![];},_0x40a32b['onmouseleave']=function(){_0x1d7875=![];},_0x40a32b[_0x56f60e(0x1dc)]=function(){_0x1d7875=!![];},_0x40a32b[_0x56f60e(0x1c9)]=function(){_0x1d7875=![];};if(_0x5fbc2f>0x1){if(!_0xcba6fe)setInterval(function(){if(!_0x1d7875)!_0xde05b9['hidden']&&(_0x38a813=(_0x38a813+0x1)%_0x5fbc2f,_0x1004a0());},0x1194);}}async function _0xdabc17(_0x54b633){var _0x16c7be=_0x1a5df9,_0x1543ea=_0x54b633[_0x16c7be(0x1ee)](_0x16c7be(0x100)),_0x3f7d12=_0x54b633[_0x16c7be(0x1ee)](_0x16c7be(0x1b0));if(!_0x3f7d12)return;var _0x76ecd=_0x54b633[_0x16c7be(0x1f0)][_0x16c7be(0x1b1)]||'recent/list/5',_0x3239e4=((_0x1543ea?_0x1543ea[_0x16c7be(0x132)][_0x16c7be(0x1c2)]():'')||_0x76ecd)[_0x16c7be(0x16c)]('/'),_0x3d788c=_0x3239e4[0x0]['trim'](),_0x4b8f3a=(_0x3239e4[0x1]||'list')[_0x16c7be(0x1c2)](),_0x73af67=Math[_0x16c7be(0x199)](0x18,Math['max'](0x1,parseInt(_0x3239e4[0x2],0xa)||0x5));if(_0x3d788c===_0x16c7be(0x1d8))_0x3d788c='';var _0x17a5d7=_0x54b633[_0x16c7be(0x1ee)](_0x16c7be(0x145)),_0x2b6c5d=_0x17a5d7?_0x17a5d7[_0x16c7be(0x132)]:_0x54b633[_0x16c7be(0x1f0)]['title']||_0x16c7be(0x12b);if(_0x4b8f3a==='headline'){if(!_0x162a89){var _0x721dd0=location['pathname']['match'](/\/search\/label\/(.+)/);if(_0x721dd0)_0x3d788c=decodeURIComponent(_0x721dd0[0x1]);if(window[_0x16c7be(0x11e)])_0x3d788c='News';}}try{var _0x57d849=_0x3d788c?await _0x396da5(_0x3d788c):_0x16377b;if(!_0x57d849['length'])_0x57d849=_0x16377b;if(!_0x57d849['length']){_0x3f7d12[_0x16c7be(0x1a6)]=_0x16c7be(0x19e);return;}_0x57d849=_0x57d849[_0x16c7be(0x1bd)](0x0,_0x73af67);if(_0x4b8f3a===_0x16c7be(0x13b)){_0x45d5a0(_0x57d849,_0x3f7d12);return;}if(_0x4b8f3a===_0x16c7be(0x1fb)){_0x3f7d12[_0x16c7be(0x1a6)]=_0x2a787f(_0x2b6c5d,_0x3d788c)+_0x16c7be(0x113)+_0x57d849[_0x16c7be(0x198)](function(_0x933fb1){var _0x14473c=_0x16c7be;return _0x14473c(0x12e)+_0x45d028(_0x933fb1['url'])+'\x22>'+_0x112a59(_0x933fb1,0x190,0x28a)+'<span\x20class=\x22play-mark\x22\x20aria-hidden=\x22true\x22>&#9654;</span><div\x20class=\x22video-copy\x22><h3>'+_0x45d028(_0x933fb1['title'])+'</h3><small>'+_0x45d028(_0x933fb1[_0x14473c(0x1c3)])+_0x14473c(0x182);})[_0x16c7be(0x13c)]('')+'</div>';return;}if(_0x4b8f3a==='live'){var _0x304753=_0x57d849[0x0];_0x3f7d12[_0x16c7be(0x1a6)]='<a\x20class=\x22live-link\x22\x20href=\x22'+_0x45d028(_0x304753[_0x16c7be(0x184)])+_0x16c7be(0x10a)+_0x112a59(_0x304753,0x280,0x168)+_0x16c7be(0x18a)+_0x45d028(_0x304753[_0x16c7be(0x1fd)])+_0x16c7be(0x1e4);return;}if(_0x4b8f3a===_0x16c7be(0x15a)){_0x3f7d12[_0x16c7be(0x1a6)]=_0x2a787f(_0x2b6c5d,_0x3d788c)+_0x16c7be(0x189)+_0x57d849[_0x16c7be(0x198)](function(_0x4eef07){var _0x2d322e=_0x16c7be;return _0x2d322e(0x18d)+_0x45d028(_0x4eef07[_0x2d322e(0x184)])+'\x22>'+_0x112a59(_0x4eef07,0x1e0,0x12c)+_0x2d322e(0x152)+_0x45d028(_0x4eef07[_0x2d322e(0x1fd)])+'</h3>'+_0x4bb75f(_0x4eef07)+_0x2d322e(0x1e9);})[_0x16c7be(0x13c)]('')+'</div>';return;}_0x3f7d12['innerHTML']=_0x2a787f(_0x2b6c5d,_0x3d788c)+_0x16c7be(0x18f)+(_0x4b8f3a==='feed'?_0x16c7be(0x157):'trend-list')+'\x22>'+_0x57d849[_0x16c7be(0x198)](function(_0x39b79c){return _0x979503(_0x39b79c,_0x4b8f3a==='feed');})[_0x16c7be(0x13c)]('')+_0x16c7be(0x13e);if(_0x4b8f3a==='feed'){var _0x4bbad8=_0xde05b9[_0x16c7be(0x1fe)](_0x16c7be(0x137));_0x4bbad8['type']=_0x16c7be(0x137),_0x4bbad8[_0x16c7be(0x168)]='load-more',_0x4bbad8['textContent']='Muat\x20lebih\x20banyak';var _0x50a71f=_0x57d849[_0x16c7be(0x127)]+0x1;_0x4bbad8['onclick']=async function(){var _0x155d74=_0x16c7be;_0x4bbad8['disabled']=!![],_0x4bbad8['textContent']=_0x155d74(0x172);try{var _0x95c8ac=await _0x396da5(_0x3d788c,_0x50a71f),_0x31f631=_0x3f7d12['querySelector']('.feed-list');_0x95c8ac['forEach'](function(_0x3d0943){var _0x533acc=_0x155d74;_0x31f631['insertAdjacentHTML'](_0x533acc(0x18b),_0x979503(_0x3d0943,!![]));}),_0x50a71f+=_0x95c8ac[_0x155d74(0x127)];if(!_0x95c8ac[_0x155d74(0x127)]){_0x4bbad8[_0x155d74(0x132)]=_0x155d74(0x139);return;}_0x4bbad8['textContent']='Muat\x20lebih\x20banyak';}catch(_0x1917ad){_0x4bbad8[_0x155d74(0x132)]='Coba\x20lagi';}_0x4bbad8[_0x155d74(0x1b6)]=![];},_0x3f7d12[_0x16c7be(0x1fa)](_0x4bbad8);}}catch(_0x465b2c){_0x3f7d12[_0x16c7be(0x1a6)]=_0x16c7be(0x1f1);}}function _0x37437e(){var _0x25c9bc=_0x1a5df9,_0x440fac=_0xde05b9[_0x25c9bc(0x1ee)]('#story-links');if(!_0x440fac)return;_0x440fac['innerHTML']=_0x374983('HTML4','Kilas\x20Hari\x20Ini|News\x0aSaeparan\x20OTO|Otomotif\x0aBisnis|Bisnis\x0aMom|Mom\x0aEntertainment|Entertainment\x0aWoman|Woman\x0aBola\x20&\x20Sports|Bola\x20&\x20Sports\x0aFood\x20&\x20Travel|Food\x20&\x20Travel\x0aNews|News\x0aTekno\x20&\x20Sains|Tekno')[_0x25c9bc(0x198)](function(_0x2bbf98,_0x5786ca){var _0x5a847f=_0x25c9bc,_0x10d596=_0x2bbf98[_0x5a847f(0x16c)]('|'),_0x3ec9e8=_0x10d596[0x1]||_0x10d596[0x0],_0x5079ec=_0x16377b[_0x5a847f(0x1a0)](function(_0x4eb327){return _0x4eb327['label']===_0x3ec9e8;})||_0x16377b[_0x5786ca%_0x16377b[_0x5a847f(0x127)]];return _0x5a847f(0x142)+_0x45d028(encodeURIComponent(_0x3ec9e8))+_0x5a847f(0x125)+(_0x5079ec?_0x112a59(_0x5079ec,0xa0,0xa0):'<span\x20class=\x22story-letter\x22>'+_0x45d028(_0x10d596[0x0][0x0])+_0x5a847f(0x116))+_0x5a847f(0x188)+_0x45d028(_0x10d596[0x0])+_0x5a847f(0x156);})[_0x25c9bc(0x13c)]('');}function _0x5aba4a(){var _0x2d7824=_0x1a5df9,_0x21e67a=_0xde05b9[_0x2d7824(0x1ee)]('#topic-links');if(!_0x21e67a)return;_0x21e67a[_0x2d7824(0x1a6)]=_0x374983(_0x2d7824(0x12f),_0x2d7824(0x1e6))[_0x2d7824(0x198)](function(_0x564810){var _0x22cf73=_0x2d7824,_0x43b479=_0x564810[_0x22cf73(0x16c)]('|');return'<a\x20href=\x22/search/label/'+_0x45d028(encodeURIComponent(_0x43b479[0x1]||_0x43b479[0x0]))+'\x22>'+_0x45d028(_0x43b479[0x0])+'</a>';})[_0x2d7824(0x13c)]('');}_0xde05b9[_0x1a5df9(0x123)]('[data-ad-slot]')[_0x1a5df9(0x1bb)](function(_0x4a3a7d){var _0x5cf0df=_0x1a5df9,_0x3ac250=_0x4a3a7d[_0x5cf0df(0x1ee)]('.widget-content');if(_0x3ac250){if(_0x3ac250['innerHTML']['trim']()){var _0x369d6f=_0x4a3a7d[_0x5cf0df(0x1ee)](_0x5cf0df(0x1b5));if(_0x369d6f)_0x369d6f[_0x5cf0df(0x1d9)]();}}}),_0x5aba4a(),_0x37437e();async function _0x223bf3(){var _0x128554=_0x1a5df9;try{_0x16377b=await _0x396da5(''),_0x37437e(),await _0x556aee(),await Promise['all'](Array['from'](_0xde05b9[_0x128554(0x123)](_0x128554(0x17c)))[_0x128554(0x160)](function(_0x369f56){var _0x5d28ac=_0x128554;if(_0x369f56[_0x5d28ac(0x1c8)](_0x5d28ac(0x17b)))return _0x162a89;return!![];})[_0x128554(0x198)](_0xdabc17));if(_0x162a89){if(_0x16377b[_0x128554(0x127)])_0xde05b9[_0x128554(0x133)]['classList'][_0x128554(0x17e)](_0x128554(0x136));}}catch(_0x10d10d){_0xde05b9[_0x128554(0x123)]('.feed-block\x20.block-output')['forEach'](function(_0x29f308){var _0x1a4b39=_0x128554;_0x29f308[_0x1a4b39(0x1a6)]=_0x1a4b39(0x15f);});}}var _0x239a52=_0xde05b9[_0x1a5df9(0x187)]('article-fallback');if(_0x239a52){if(_0xde05b9['querySelector']('#Blog1\x20.post-body'))_0x239a52[_0x1a5df9(0x1d9)]();}async function _0x556aee(){var _0x1ac8b8=_0x1a5df9,_0x42d5da=_0xde05b9[_0x1ac8b8(0x187)](_0x1ac8b8(0x146));if(!_0x42d5da)return;var _0x398ca5=_0xde05b9[_0x1ac8b8(0x187)]('fallback-body');try{var _0xf5c550=decodeURIComponent(location['pathname']),_0x32d299=_0x16377b['find'](function(_0x4712f3){var _0x402afa=_0x1ac8b8;return decodeURIComponent(new URL(_0x4712f3[_0x402afa(0x184)],location['href'])['pathname'])===_0xf5c550;}),_0x44ef83;if(window[_0x1ac8b8(0x11e)])_0x44ef83=await _0x388962(_0x1ac8b8(0x1ae)),_0x32d299=_0x44ef83[0x0];else{if(_0x32d299){var _0x51522a=_0x32d299['id'][_0x1ac8b8(0x16c)]('post-')['pop']();_0x44ef83=await _0x388962('/feeds/posts/default/'+encodeURIComponent(_0x51522a)+_0x1ac8b8(0x166)),_0x32d299=_0x44ef83[0x0];}else{var _0x547fa5=Array[_0x1ac8b8(0x1cf)](_0xde05b9[_0x1ac8b8(0x123)](_0x1ac8b8(0x14e)))[_0x1ac8b8(0x198)](function(_0x54bb4c){return _0x54bb4c['href'];})[_0x1ac8b8(0x1a0)](function(_0x1e75a7){return/\/feeds\/\d+\/comments/['test'](_0x1e75a7);}),_0x3eebf5=_0x547fa5?_0x547fa5['match'](/\/feeds\/(\d+)\/comments/):null;_0x3eebf5?_0x44ef83=await _0x388962(_0x1ac8b8(0x16a)+_0x3eebf5[0x1]+_0x1ac8b8(0x166)):_0x44ef83=await _0x388962(_0x1ac8b8(0x1d3)+encodeURIComponent(_0x42d5da['querySelector']('h1')[_0x1ac8b8(0x132)])),_0x32d299=_0x44ef83[_0x1ac8b8(0x1a0)](function(_0x25099d){var _0x47708c=_0x1ac8b8;return decodeURIComponent(new URL(_0x25099d[_0x47708c(0x184)],location['href'])['pathname'])===_0xf5c550;});}}if(!_0x32d299)throw Error(_0x1ac8b8(0x1e1));_0x42d5da[_0x1ac8b8(0x1ee)]('h1')['textContent']=_0x32d299[_0x1ac8b8(0x1fd)],_0xde05b9['getElementById'](_0x1ac8b8(0x1a9))[_0x1ac8b8(0x132)]=_0x32d299[_0x1ac8b8(0x1c3)],_0xde05b9['getElementById']('fallback-date')['textContent']=new Date(_0x32d299[_0x1ac8b8(0x148)])['toLocaleString'](_0x1ac8b8(0x11f),{'day':_0x1ac8b8(0x167),'month':_0x1ac8b8(0x144),'year':_0x1ac8b8(0x167),'hour':_0x1ac8b8(0x104),'minute':_0x1ac8b8(0x104)}),_0x398ca5[_0x1ac8b8(0x1a6)]=_0x32d299['body']||_0x1ac8b8(0x16f)+_0x45d028(_0x32d299[_0x1ac8b8(0x16e)])+_0x1ac8b8(0x173),_0x398ca5[_0x1ac8b8(0x1f0)]['loading']=_0x1ac8b8(0x10b),_0xde05b9[_0x1ac8b8(0x187)](_0x1ac8b8(0x177))['innerHTML']=_0x32d299[_0x1ac8b8(0x1ba)][_0x1ac8b8(0x198)](function(_0x42dc4b){var _0x1e1d60=_0x1ac8b8;return'<a\x20href=\x22/search/label/'+_0x45d028(encodeURIComponent(_0x42dc4b))+'\x22>'+_0x45d028(_0x42dc4b)+_0x1e1d60(0x1e9);})[_0x1ac8b8(0x13c)](''),_0x32eb3a();}catch(_0x5a53ad){_0x398ca5[_0x1ac8b8(0x1a6)]='<p>Artikel\x20belum\x20dapat\x20dimuat.\x20<a\x20href=\x22'+_0x45d028(location[_0x1ac8b8(0x18c)])+_0x1ac8b8(0x1e8),_0x398ca5[_0x1ac8b8(0x1f0)][_0x1ac8b8(0x1f2)]=_0x1ac8b8(0x10b);}}_0x223bf3(),_0xde05b9[_0x1a5df9(0x123)](_0x1a5df9(0x190))[_0x1a5df9(0x1bb)](function(_0x61bfd7){var _0x397897=_0x1a5df9,_0x2ccf5d=encodeURIComponent(location[_0x397897(0x1db)]),_0x320cac=encodeURIComponent(_0xde05b9['title']),_0x4ab5b5=_0x61bfd7['dataset'][_0x397897(0x17a)],_0x5107cb={'whatsapp':'https://wa.me/?text='+encodeURIComponent(_0xde05b9['title']+'\x20'+location['href']),'facebook':_0x397897(0x14c)+_0x2ccf5d,'x':_0x397897(0x121)+_0x2ccf5d+_0x397897(0x120)+_0x320cac,'telegram':'https://t.me/share/url?url='+_0x2ccf5d+_0x397897(0x120)+_0x320cac};_0x61bfd7[_0x397897(0x1db)]=_0x5107cb[_0x4ab5b5];}),_0xde05b9['querySelectorAll'](_0x1a5df9(0x1bf))['forEach'](function(_0x24d2c5){var _0x4a6096=_0x1a5df9;_0x24d2c5[_0x4a6096(0x14b)]=async function(){var _0x1e1cbb=_0x4a6096,_0x533caa=_0x24d2c5[_0x1e1cbb(0x1c8)](_0x1e1cbb(0x164))[_0x1e1cbb(0x1ee)](_0x1e1cbb(0x1b3)),_0x4d884c=![];try{await navigator[_0x1e1cbb(0x124)]['writeText'](location[_0x1e1cbb(0x1db)]),_0x4d884c=!![];}catch(_0x2f990f){var _0x4bbac1=_0xde05b9['createElement'](_0x1e1cbb(0x1d0));_0x4bbac1[_0x1e1cbb(0x128)]=location[_0x1e1cbb(0x1db)],_0x4bbac1[_0x1e1cbb(0x119)][_0x1e1cbb(0x14a)]=_0x1e1cbb(0x1f6),_0x4bbac1[_0x1e1cbb(0x119)][_0x1e1cbb(0x108)]='0',_0xde05b9[_0x1e1cbb(0x133)][_0x1e1cbb(0x1fa)](_0x4bbac1),_0x4bbac1['select']();try{_0x4d884c=_0xde05b9[_0x1e1cbb(0x196)](_0x1e1cbb(0x1b9));}catch(_0x50d588){}_0x4bbac1['remove'](),_0x24d2c5[_0x1e1cbb(0x11c)]();}if(_0x533caa)_0x533caa['textContent']=_0x4d884c?'Tautan\x20berhasil\x20disalin':'Salin\x20tautan\x20dari\x20bilah\x20alamat\x20browser';var _0x16f443=_0x24d2c5[_0x1e1cbb(0x1ee)]('span');_0x16f443&&(_0x16f443[_0x1e1cbb(0x132)]=_0x4d884c?'Tersalin':_0x1e1cbb(0x165),setTimeout(function(){_0x16f443['textContent']='Salin\x20link';},0x7d0));};});function _0x39c7d1(){var _0x1c23dd=_0x1a5df9,_0x3e221e=![];function _0x26b71a(){var _0x172836=_0xabb9;_0x3e221e=![],_0xde05b9[_0x172836(0x123)](_0x172836(0x1bc))['forEach'](function(_0x1206f2){var _0x1cb0b2=_0x172836,_0x59bf7e=_0x1206f2[_0x1cb0b2(0x1ca)](),_0xa45de1=_0x1206f2[_0x1cb0b2(0x1e0)];if(!_0xa45de1)return;if(_0x59bf7e['bottom']<-0x32||_0x59bf7e[_0x1cb0b2(0x1d6)]>innerHeight+0x32)return;_0xa45de1[_0x1cb0b2(0x119)][_0x1cb0b2(0x118)]=_0x59bf7e[_0x1cb0b2(0x118)]+_0x59bf7e[_0x1cb0b2(0x1dd)]/0x2+'px',_0xa45de1[_0x1cb0b2(0x119)]['maxWidth']=Math['max'](0x0,Math['min'](_0x59bf7e[_0x1cb0b2(0x1dd)],innerWidth-0x18))+'px';});}window['saeAlignParallax']=_0x26b71a,addEventListener(_0x1c23dd(0x1a7),function(){!_0x3e221e&&(_0x3e221e=!![],requestAnimationFrame(_0x26b71a));},{'passive':!![]}),addEventListener(_0x1c23dd(0x19b),_0x26b71a),_0x26b71a();}_0xde05b9[_0x1a5df9(0x123)]('[data-close]')[_0x1a5df9(0x1bb)](function(_0x291e63){var _0x2e0a9f=_0x1a5df9;_0x291e63[_0x2e0a9f(0x185)](_0x2e0a9f(0x1ef),function(){var _0x242821=_0x2e0a9f,_0x313d0a=_0xde05b9['getElementById'](_0x291e63['dataset'][_0x242821(0x1cc)]);if(_0x313d0a)_0x313d0a[_0x242821(0x1e2)]['add'](_0x242821(0x17f));});});var _0xfadff7=_0xde05b9['getElementById']('AdTopHeader');if(_0xfadff7){if(_0xfadff7[_0x1a5df9(0x1e2)][_0x1a5df9(0x140)](_0x1a5df9(0x193)))_0xde05b9[_0x1a5df9(0x187)]('sm-vt')[_0x1a5df9(0x1ab)]=!![];}_0x39c7d1();function _0x32eb3a(){var _0x40396a=_0x1a5df9,_0x19fa6c=_0xde05b9['querySelector'](_0x40396a(0x12d)),_0x597ace=_0xde05b9[_0x40396a(0x1ee)]('[data-reading]');if(_0x19fa6c){if(_0x19fa6c['dataset'][_0x40396a(0x1f2)]!=='true'){if(window['saePlaceParallax'])window[_0x40396a(0x1cd)](_0x19fa6c);}}if(_0x19fa6c){if(_0x19fa6c[_0x40396a(0x1f0)][_0x40396a(0x1f2)]==='true')return;}if(_0x19fa6c){if(_0x597ace)_0x597ace['textContent']=_0x40396a(0x1aa)+Math[_0x40396a(0x103)](0x1,Math[_0x40396a(0x107)](_0x19fa6c[_0x40396a(0x132)][_0x40396a(0x1c2)]()[_0x40396a(0x16c)](/\s+/)['length']/0xc8))+_0x40396a(0x18e);}var _0x45ada4=_0xde05b9[_0x40396a(0x1ee)](_0x40396a(0x1a2));if(_0x45ada4){if(_0x19fa6c){var _0x55c716=Array[_0x40396a(0x1cf)](_0x19fa6c[_0x40396a(0x1ed)])[_0x40396a(0x160)](function(_0x3766cb){return _0x3766cb['tagName']==='P';});if(_0x55c716[_0x40396a(0x127)]>0x3)_0x55c716[0x3][_0x40396a(0x1a1)](_0x40396a(0x15e),_0x45ada4);else _0x19fa6c['appendChild'](_0x45ada4);_0x45ada4[_0x40396a(0x1ab)]=![];}}}_0x32eb3a(),_0xde05b9['querySelectorAll']('#primary-links\x20a')[_0x1a5df9(0x1bb)](function(_0x24356a){var _0xb3949c=_0x1a5df9;if(decodeURIComponent(location[_0xb3949c(0x18c)])===decodeURIComponent(new URL(_0x24356a[_0xb3949c(0x1db)])[_0xb3949c(0x18c)]))_0x24356a[_0xb3949c(0x1e2)][_0xb3949c(0x17e)]('active');});}());}));
+//]]></script>
+<div id='tbd-license-context' hidden='hidden' expr:data-official-preview='data:view.isPreview'></div>
+<div id='tbd-license-gate' class='tbd-license-gate' role='dialog' aria-modal='true' aria-labelledby='tbd-license-title' aria-describedby='tbd-license-description' tabindex='-1' hidden='hidden'>
+ <section class='tbd-license-card'>
+  <a class='tbd-license-brand' href='https://www.temablogger.com/' target='_blank' rel='noopener'><span class='tbd-license-logo' aria-hidden='true'>T<span></span></span><span>Tema<b>Blogger</b></span></a>
+  <span class='tbd-license-symbol' aria-hidden='true'><svg viewBox='0 0 24 24' width='26' height='26' fill='currentColor'><path d='M21 18H15V15H13.3C12.2 17.4 9.7 19 7 19C3.1 19 0 15.9 0 12S3.1 5 7 5C9.7 5 12.2 6.6 13.3 9H24V15H21V18M17 16H19V13H22V11H11.9L11.7 10.3C11 8.3 9.1 7 7 7C4.2 7 2 9.2 2 12S4.2 17 7 17C9.1 17 11 15.7 11.7 13.7L11.9 13H17V16M7 15C5.3 15 4 13.7 4 12S5.3 9 7 9 10 10.3 10 12 8.7 15 7 15M7 11C6.4 11 6 11.4 6 12S6.4 13 7 13 8 12.6 8 12 7.6 11 7 11Z'></path></svg></span>
+  <p class='tbd-license-eyebrow'>LISENSI TEMPLATE</p>
+  <h2 id='tbd-license-title'>Aktifkan lisensi SaeParan</h2>
+  <p id='tbd-license-description'>Domain <strong data-license-domain='true'></strong> belum terdaftar untuk tema ini. Masuk ke dashboard TemaBlogger, pilih lisensi SaeParan, lalu isi domain yang ingin diaktifkan.</p>
+  <div class='tbd-license-actions'><a data-license-dashboard='true' href='https://www.temablogger.com/p/client-area.html#licenses' target='_blank' rel='noopener'>Aktifkan Lisensi</a><a data-license-store='true' class='tbd-license-secondary' href='https://www.temablogger.com/' target='_blank' rel='noopener'>Beli Tema SaeParan</a></div>
+  <button id='tbd-license-check' type='button'>Sudah diaktifkan? Periksa lagi</button>
+ </section>
+</div>
+<div id='tbd-license-shield' class='tbd-license-shield' aria-hidden='true' hidden='hidden'></div>
+<div id='tbd-license-status' class='tbd-license-status' role='status' aria-live='polite' hidden='hidden'><span>Verifikasi lisensi sementara belum tersedia. Periksa koneksi lalu coba lagi.</span><button id='tbd-license-retry' type='button'>Coba Lagi</button></div>
+
+
+<span hidden='hidden' id='tb-identity-blog-title'><data:blog.title/></span>
+<b:if cond='!data:view.isLayoutMode'><script id='tb-identity-presentation-b-20261107' type='text/javascript'>//<![CDATA[
+/* tb-identity-presentation-b-20261107: native logo and exact stock credit presentation only. */
+(function(){
+ 'use strict';
+ var cfg={"slug":"saeparan","kind":"customer","source":"#brand-name","native":false,"mirror":"[data-tb-logo-mirror=\"saeparan\"]","creditTargets":""};
+ var queued=false;
+ function tidy(s){return String(s||'').replace(/\s+/g,' ').trim();}
+ function stockCredit(el){
+  var text=tidy(el.textContent),links=el.querySelectorAll('a');
+  var linked=/^Copyright © (\d{4})(?:\.)? Tema Blogger(?: \.)?\.?(?: )All rights reserved\.$/.exec(text);
+  var year=linked&&linked[1];
+  if(linked){
+   if(links.length!==1||tidy(links[0].textContent)!=='Tema Blogger'||links[0].getAttribute('href')!=="https://www.temablogger.com/")return;
+  }else{
+   var legacy=cfg.slug==='saetimes'&&cfg.kind==='demo'&&/^© (\d{4}) SAETIMES\. All Right Reserved\.$/.exec(text);
+   if(!legacy||links.length!==0)return;year=legacy[1];
+  }
+  var a=document.createElement('a');a.href="https://www.temablogger.com/";a.textContent='Tema Blogger';
+  var y=el.querySelector('#year');if(y)y.textContent=year;
+  el.replaceChildren(document.createTextNode('© '),y||document.createTextNode(year),document.createTextNode(' '),a,document.createTextNode('. All rights reserved.'));
+ }
+ function mirror(){
+  if(!cfg.source)return;
+  var src=document.querySelector(cfg.source);if(!src)return;
+  var img=src.querySelector('img'),title=document.getElementById('tb-identity-blog-title');
+  var name=cfg.native?tidy(title&&title.textContent):tidy(src.textContent);
+  if(img)name=img.getAttribute('alt')||tidy(title&&title.textContent);
+  if(!name)name=tidy(title&&title.textContent);
+  document.querySelectorAll(cfg.mirror).forEach(function(target){
+   if(target===src||src.contains(target))return;
+   if(img&&img.getAttribute('src')){
+    var old=target.querySelector('img');if(old&&old.getAttribute('src')===img.getAttribute('src'))return;
+    var copy=img.cloneNode(true);copy.removeAttribute('id');copy.removeAttribute('width');copy.removeAttribute('height');
+    target.replaceChildren(copy);
+   }else if(name&&tidy(target.textContent)!==name)target.textContent=name;
+  });
+ }
+ function apply(){queued=false;if(!document.body||document.body.id==='layout')return;
+  if(cfg.creditTargets)document.querySelectorAll(cfg.creditTargets).forEach(stockCredit);
+  mirror();
+ }
+ function schedule(){if(queued)return;queued=true;(window.requestAnimationFrame||function(f){setTimeout(f,0);})(apply);}
+ function start(){apply();if(window.MutationObserver&&document.body)new MutationObserver(schedule).observe(document.body,{childList:true,subtree:true});}
+ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',start,{once:true});else start();
+})();
+//]]></script></b:if>
+</body>
+</html>
