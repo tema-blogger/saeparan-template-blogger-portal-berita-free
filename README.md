@@ -10,7 +10,7 @@ Template Blogger portal berita. Edisi Free untuk mencoba tampilan dan pengelolaa
 
 ## Unduh dan demo
 
-- [Unduh SaeParan Free v1.2.7](SaeParan-v1.2.7-Free.xml) — buka file, lalu pilih **Raw / Download raw file**.
+- [Unduh SaeParan Free v1.2.8](SaeParan-v1.2.8-Free.xml) — buka file, lalu pilih **Raw / Download raw file**.
 - [Lihat demo produk](https://saeparan.temablogger.com/) (demo produk lengkap, bukan demo pembatasan Free).
 - [Beli SaeParan Premium](https://www.temablogger.com/)
 - [Dashboard pelanggan Tema Blogger](https://www.temablogger.com/p/client-area.html#licenses)
@@ -45,7 +45,7 @@ Penggabungan Free → Premium diperiksa pada berkas XML lokal untuk 16 produk: i
 
 ## Versi dan kredit aset
 
-Edisi Free **1.2.7**, berdasarkan mesin tema Premium **1.2.6**. Ini kanal distribusi terpisah; paket pelanggan Premium tidak diganti.
+Edisi Free **1.2.8**, berdasarkan mesin tema Premium **1.2.6**. Ini kanal distribusi terpisah; paket pelanggan Premium tidak diganti.
 
 Ikon Material Design Icons berasal dari [Pictogrammers](https://pictogrammers.com/library/mdi/), dengan lisensi Apache 2.0 untuk aset ikon. Lihat `PICTOGRAMMERS-NOTICE.txt` dan `LICENSE-APACHE-2.0.txt`. Lisensi ikon tidak mengubah ketentuan tema.
 
